@@ -91,9 +91,10 @@ def main():
         append_history(now, new_items)
         for item in new_items:
             seen[item["id"]] = now
-        save_seen(seen)
     else:
         print("새 항목 없음 — Discord 전송 스킵")
+
+    save_seen(seen)  # 새 항목 유무와 관계없이 항상 저장 (파일 존재 보장 + 90일 정리)
 
     print("=== 완료 ===")
 
