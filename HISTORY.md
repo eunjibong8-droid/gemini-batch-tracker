@@ -1,5 +1,10 @@
 # 발견 이력
 
+## 2026-04-18 10:27 UTC
+- 💬 **[Google Dev Forum]** [Gemini Batch API - Progress Tracking](https://discuss.ai.google.dev/t/gemini-batch-api-progress-tracking/140890)
+- 💬 **[Google Dev Forum]** [Gemini Batch API vs Streaming API — Reliability](https://discuss.ai.google.dev/t/gemini-batch-api-vs-streaming-api-reliability/140889)
+- 💬 **[Google Dev Forum]** [[Vertex AI,Batch] Gemini 3.1 Flash Image - GCS Authentication Error (Code 13 / impersonation_policy failure)](https://discuss.ai.google.dev/t/vertex-ai-batch-gemini-3-1-flash-image-gcs-authentication-error-code-13-impersonation-policy-failure/140761)
+
 ## 2026-04-18 08:22 UTC
 - 🐙 **[GitHub (googleapis/js-genai)]** [Bug: silenceDurationMs in automaticActivityDetection is ignored on gemini-3.1-flash-live-preview](https://github.com/googleapis/js-genai/issues/1467)
 - 🐙 **[GitHub (googleapis/js-genai)]** [Help escalating Gemini Batch API issue](https://github.com/googleapis/js-genai/issues/1453)
