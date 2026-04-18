@@ -12,6 +12,9 @@ jobs:
     permissions:
       contents: write
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true  # Node.js 24 명시적 사용
+
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
@@ -43,6 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add seen.json HISTORY.md
+          git add seen.json
+          [ -f HISTORY.md ] && git add HISTORY.md || true
           git diff --staged --quiet || git commit -m "chore: update seen.json and HISTORY.md"
           git push
