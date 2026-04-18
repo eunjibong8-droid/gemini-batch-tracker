@@ -38,11 +38,11 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           GITHUB_TOKEN_CUSTOM: ${{ secrets.GITHUB_TOKEN_CUSTOM }}
 
-      - name: seen.json 업데이트 커밋
+      - name: 변경 파일 커밋 및 푸시
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add seen.json
-          git diff --staged --quiet || git commit -m "chore: update seen.json"
+          git add seen.json HISTORY.md
+          git diff --staged --quiet || git commit -m "chore: update seen.json and HISTORY.md"
           git push

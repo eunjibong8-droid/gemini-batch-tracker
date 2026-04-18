@@ -4,8 +4,9 @@ from datetime import datetime, timedelta, timezone
 from sources import github_issues, forum_rss
 from notifiers import discord
 
-KEYWORDS     = ["batch"]
-SEEN_FILE    = "seen.json"
+KEYWORDS      = ["batch"]
+SEEN_FILE     = "seen.json"
+HISTORY_FILE  = "HISTORY.md"
 MAX_SEEN_DAYS = 90  # seen.json에서 이 기간이 지난 항목은 자동 정리
 
 def load_seen() -> dict:
@@ -29,6 +30,37 @@ def save_seen(seen: dict) -> None:
         print(f"[seen] 오래된 항목 {removed}개 정리 (90일 초과)")
     with open(SEEN_FILE, "w") as f:
         json.dump(pruned, f, indent=2, ensure_ascii=False)
+
+def append_history(now: str, new_items: list[dict]) -> None:
+    """새 항목 발견 시 HISTORY.md 맨 위에 기록 추가."""
+    # 날짜/시간 포맷: 2026-04-18 10:30 UTC
+    dt = datetime.fromisoformat(now)
+    timestamp = dt.strftime("%Y-%m-%d %H:%M UTC")
+
+    lines = [f"## {timestamp}\n"]
+    for item in new_items:
+        state_tag = " `closed`" if item.get("state") == "closed" else ""
+        lines.append(f"- {item['emoji']} **[{item['source']}]**{state_tag} [{item['title']}]({item['url']})\n")
+    lines.append("\n")
+    new_block = "".join(lines)
+
+    # 기존 내용 앞에 삽입 (최신이 위에 오도록)
+    existing = ""
+    if os.path.exists(HISTORY_FILE):
+        with open(HISTORY_FILE, encoding="utf-8") as f:
+            existing = f.read()
+
+    # 헤더가 없으면 최초 생성
+    header = "# 발견 이력\n\n"
+    if existing.startswith(header):
+        content = header + new_block + existing[len(header):]
+    else:
+        content = header + new_block + existing
+
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        f.write(content)
+
+    print(f"[history] HISTORY.md에 {len(new_items)}개 항목 기록")
 
 def main():
     now = datetime.now(timezone.utc).isoformat()
@@ -56,6 +88,7 @@ def main():
 
     if new_items:
         discord.send(new_items)
+        append_history(now, new_items)
         for item in new_items:
             seen[item["id"]] = now
         save_seen(seen)
