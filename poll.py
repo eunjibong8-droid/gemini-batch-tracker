@@ -1,41 +1,67 @@
 import json
 import os
+from datetime import datetime, timedelta, timezone
 from sources import github_issues, forum_rss
 from notifiers import discord
 
-KEYWORD   = "batch"
-SEEN_FILE = "seen.json"
+KEYWORDS     = ["batch"]
+SEEN_FILE    = "seen.json"
+MAX_SEEN_DAYS = 90  # seen.json에서 이 기간이 지난 항목은 자동 정리
 
-def load_seen() -> set:
+def load_seen() -> dict:
+    """seen.json 로드. 기존 리스트 형식도 자동 마이그레이션."""
     if os.path.exists(SEEN_FILE):
         with open(SEEN_FILE) as f:
-            return set(json.load(f))
-    return set()
+            data = json.load(f)
+        if isinstance(data, list):
+            # 구 형식(리스트) → 신 형식(dict) 마이그레이션
+            print(f"[seen] 구 형식 감지 — dict로 마이그레이션 ({len(data)}개)")
+            return {item_id: "1970-01-01T00:00:00+00:00" for item_id in data}
+        return data
+    return {}
 
-def save_seen(seen: set) -> None:
+def save_seen(seen: dict) -> None:
+    """MAX_SEEN_DAYS 이상 지난 항목을 정리한 뒤 저장."""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=MAX_SEEN_DAYS)).isoformat()
+    pruned = {k: v for k, v in seen.items() if v >= cutoff}
+    removed = len(seen) - len(pruned)
+    if removed:
+        print(f"[seen] 오래된 항목 {removed}개 정리 (90일 초과)")
     with open(SEEN_FILE, "w") as f:
-        json.dump(list(seen), f, indent=2)
+        json.dump(pruned, f, indent=2, ensure_ascii=False)
 
 def main():
-    print(f"=== Gemini Batch Tracker 실행 (키워드: '{KEYWORD}') ===")
-    
+    now = datetime.now(timezone.utc).isoformat()
+    print(f"=== Gemini Batch Tracker 실행 ({now}) ===")
+    print(f"모니터링 키워드: {KEYWORDS}")
+
     seen = load_seen()
     print(f"이미 처리된 항목: {len(seen)}개")
-    
+
     all_items = []
-    all_items += github_issues.fetch(KEYWORD)
-    all_items += forum_rss.fetch(KEYWORD)
-    
-    new_items = [item for item in all_items if item["id"] not in seen]
+    for keyword in KEYWORDS:
+        all_items += github_issues.fetch(keyword)
+        all_items += forum_rss.fetch(keyword)
+
+    # 중복 제거 (같은 실행에서 여러 키워드에 걸릴 수 있음)
+    seen_in_run: set[str] = set()
+    unique_items = []
+    for item in all_items:
+        if item["id"] not in seen_in_run:
+            seen_in_run.add(item["id"])
+            unique_items.append(item)
+
+    new_items = [item for item in unique_items if item["id"] not in seen]
     print(f"새 항목: {len(new_items)}개")
-    
+
     if new_items:
         discord.send(new_items)
-        seen.update(item["id"] for item in new_items)
+        for item in new_items:
+            seen[item["id"]] = now
         save_seen(seen)
     else:
         print("새 항목 없음 — Discord 전송 스킵")
-    
+
     print("=== 완료 ===")
 
 if __name__ == "__main__":

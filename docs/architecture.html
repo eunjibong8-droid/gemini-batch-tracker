@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini Batch Tracker — 동작 구조</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --surface2: #21262d;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --purple: #bc8cff;
+    --pink: #f778ba;
+    --orange: #ffa657;
+    --red: #f85149;
+    --github: #24292e;
+    --discord: #5865f2;
+    --google: #4285f4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+
+  /* ── 레이아웃 ── */
+  .page { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+
+  /* ── 헤더 ── */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+  .header h1 span { color: var(--accent); }
+  .header p { color: var(--muted); margin-top: 8px; font-size: 15px; }
+  .badge {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+    margin-right: 6px;
+  }
+  .badge.green { border-color: var(--green); color: var(--green); }
+  .badge.blue  { border-color: var(--accent); color: var(--accent); }
+
+  /* ── 섹션 ── */
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2 .num {
+    background: var(--accent);
+    color: #000;
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  h3 { font-size: 15px; font-weight: 600; margin: 20px 0 10px; color: var(--accent); }
+
+  /* ── 카드 ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  /* ── 코드 블록 ── */
+  pre, code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 13px;
+  }
+  pre {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    line-height: 1.55;
+    margin: 10px 0;
+  }
+  code { background: var(--surface2); padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+
+  /* 신택스 컬러 */
+  .kw  { color: #ff7b72; }   /* keyword */
+  .fn  { color: #d2a8ff; }   /* function */
+  .st  { color: #a5d6ff; }   /* string */
+  .cm  { color: #8b949e; }   /* comment */
+  .nm  { color: #ffa657; }   /* number/name */
+  .py  { color: #79c0ff; }   /* builtin */
+
+  /* ── 플로우 다이어그램 ── */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    margin: 20px 0;
+  }
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+  .flow-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .flow-box.trigger { border-color: var(--yellow); color: var(--yellow); }
+  .flow-box.action  { border-color: var(--accent);  color: var(--accent); }
+  .flow-box.python  { border-color: var(--purple);  color: var(--purple); }
+  .flow-box.discord { border-color: #5865f2; color: #5865f2; }
+  .flow-box.git     { border-color: var(--orange); color: var(--orange); }
+  .flow-box.github-src { border-color: #58d68d; color: #58d68d; }
+  .flow-box.forum-src  { border-color: var(--google); color: #7ab4f8; }
+  .flow-box.decision {
+    border-color: var(--pink);
+    color: var(--pink);
+    border-radius: 4px;
+    background: rgba(247, 120, 186, 0.05);
+  }
+  .arrow {
+    color: var(--muted);
+    font-size: 18px;
+    padding: 0 8px;
+    flex-shrink: 0;
+  }
+  .arrow-down {
+    color: var(--muted);
+    font-size: 18px;
+    padding: 4px 0 4px 24px;
+    display: block;
+  }
+
+  /* ── 스텝 리스트 ── */
+  .steps { list-style: none; }
+  .steps li {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: flex-start;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .step-num {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 26px; height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-body { flex: 1; }
+  .step-body strong { display: block; margin-bottom: 4px; font-size: 14px; }
+  .step-body p { color: var(--muted); font-size: 13px; }
+
+  /* ── 테이블 ── */
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 10px 0; }
+  th {
+    background: var(--surface2);
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 12px;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td code { font-size: 12px; }
+
+  /* ── seen.json 시각화 ── */
+  .json-vis {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .json-key   { color: #a5d6ff; }
+  .json-val   { color: #a5f3b0; }
+  .json-brace { color: var(--muted); }
+  .json-old   { color: var(--red); text-decoration: line-through; opacity: 0.5; }
+
+  /* ── 메인 아키텍처 SVG ── */
+  .arch-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px 24px;
+    overflow-x: auto;
+  }
+
+  /* ── 인라인 노트 ── */
+  .note {
+    background: rgba(88, 166, 255, 0.07);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 12px 0;
+  }
+  .note strong { color: var(--text); }
+  .warn {
+    background: rgba(210, 153, 34, 0.08);
+    border-left: 3px solid var(--yellow);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    margin: 12px 0;
+  }
+
+  /* ── 파일 트리 ── */
+  .tree {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 2;
+  }
+  .tree .dir  { color: var(--accent); }
+  .tree .file { color: var(--text); }
+  .tree .desc { color: var(--muted); margin-left: 8px; font-size: 12px; }
+
+  /* ── 구분선 ── */
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ===== 헤더 ===== -->
+  <div class="header">
+    <h1>🔍 <span>Gemini Batch Tracker</span> — 동작 구조 문서</h1>
+    <p>이 문서는 프로젝트의 전체 로직과 실행 프로세스를 단계별로 설명합니다.</p>
+    <span class="badge green">GitHub Actions 자동화</span>
+    <span class="badge blue">30분 폴링 주기</span>
+    <span class="badge">Python 3.11</span>
+  </div>
+
+  <!-- ===== 1. 프로젝트 구조 ===== -->
+  <section>
+    <h2><span class="num">1</span> 프로젝트 파일 구조</h2>
+    <div class="tree">
+      <span class="dir">gemini-batch-tracker/</span><br>
+      &nbsp;&nbsp;├── <span class="file">poll.py</span><span class="desc">← 메인 진입점. 전체 흐름 오케스트레이션</span><br>
+      &nbsp;&nbsp;├── <span class="file">seen.json</span><span class="desc">← 이미 처리된 항목 ID + 타임스탬프 저장</span><br>
+      &nbsp;&nbsp;├── <span class="file">requirements.txt</span><span class="desc">← requests, feedparser</span><br>
+      &nbsp;&nbsp;├── <span class="dir">sources/</span><br>
+      &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── <span class="file">github_issues.py</span><span class="desc">← GitHub API로 이슈 수집</span><br>
+      &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── <span class="file">forum_rss.py</span><span class="desc">← RSS 피드로 포럼 글 수집</span><br>
+      &nbsp;&nbsp;├── <span class="dir">notifiers/</span><br>
+      &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── <span class="file">discord.py</span><span class="desc">← Discord 웹훅으로 알림 전송</span><br>
+      &nbsp;&nbsp;└── <span class="dir">.github/workflows/</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── <span class="file">poll.yml</span><span class="desc">← GitHub Actions 자동 실행 정의</span>
+    </div>
+  </section>
+
+  <!-- ===== 2. 전체 아키텍처 ===== -->
+  <section>
+    <h2><span class="num">2</span> 전체 동작 아키텍처</h2>
+    <div class="arch-wrap">
+      <svg width="100%" viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#8b949e"/>
+          </marker>
+          <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+          </marker>
+          <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#5865f2"/>
+          </marker>
+          <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#ffa657"/>
+          </marker>
+        </defs>
+
+        <!-- GitHub Actions 트리거 -->
+        <rect x="10" y="130" width="140" height="52" rx="8" fill="#21262d" stroke="#d29922" stroke-width="1.5"/>
+        <text x="80" y="151" text-anchor="middle" fill="#d29922" font-size="11" font-weight="600">⏱ GitHub Actions</text>
+        <text x="80" y="168" text-anchor="middle" fill="#8b949e" font-size="10">cron: */30 * * * *</text>
+        <text x="80" y="182" text-anchor="middle" fill="#8b949e" font-size="10">(30분마다 자동 실행)</text>
+
+        <!-- 화살표 → poll.py -->
+        <line x1="150" y1="156" x2="195" y2="156" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- poll.py 박스 -->
+        <rect x="198" y="110" width="130" height="92" rx="8" fill="#21262d" stroke="#bc8cff" stroke-width="1.5"/>
+        <text x="263" y="133" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="600">🐍 poll.py</text>
+        <text x="263" y="150" text-anchor="middle" fill="#8b949e" font-size="10">seen.json 로드</text>
+        <text x="263" y="165" text-anchor="middle" fill="#8b949e" font-size="10">소스 수집 호출</text>
+        <text x="263" y="180" text-anchor="middle" fill="#8b949e" font-size="10">중복 필터링</text>
+        <text x="263" y="195" text-anchor="middle" fill="#8b949e" font-size="10">새 항목 판별</text>
+
+        <!-- 위쪽 화살표 → GitHub Source -->
+        <line x1="263" y1="110" x2="263" y2="74" stroke="#8b949e" stroke-width="1.5"/>
+        <line x1="263" y1="74" x2="420" y2="74" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- GitHub Source -->
+        <rect x="423" y="44" width="170" height="60" rx="8" fill="#21262d" stroke="#58d68d" stroke-width="1.5"/>
+        <text x="508" y="66" text-anchor="middle" fill="#58d68d" font-size="11" font-weight="600">🐙 github_issues.py</text>
+        <text x="508" y="82" text-anchor="middle" fill="#8b949e" font-size="10">3개 레포 × 최근 100개 이슈</text>
+        <text x="508" y="96" text-anchor="middle" fill="#8b949e" font-size="10">title/body에 "batch" 포함 필터</text>
+
+        <!-- GitHub API 외부 -->
+        <rect x="660" y="44" width="140" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="5,3"/>
+        <text x="730" y="66" text-anchor="middle" fill="#8b949e" font-size="11">GitHub REST API</text>
+        <text x="730" y="82" text-anchor="middle" fill="#8b949e" font-size="10">api.github.com</text>
+        <text x="730" y="96" text-anchor="middle" fill="#8b949e" font-size="10">GITHUB_TOKEN_CUSTOM</text>
+        <line x1="593" y1="74" x2="658" y2="74" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+        <!-- 아래쪽 화살표 → Forum Source -->
+        <line x1="263" y1="202" x2="263" y2="238" stroke="#8b949e" stroke-width="1.5"/>
+        <line x1="263" y1="238" x2="420" y2="238" stroke="#8b949e" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- Forum Source -->
+        <rect x="423" y="208" width="170" height="60" rx="8" fill="#21262d" stroke="#7ab4f8" stroke-width="1.5"/>
+        <text x="508" y="230" text-anchor="middle" fill="#7ab4f8" font-size="11" font-weight="600">💬 forum_rss.py</text>
+        <text x="508" y="246" text-anchor="middle" fill="#8b949e" font-size="10">Google Dev Forum RSS</text>
+        <text x="508" y="260" text-anchor="middle" fill="#8b949e" font-size="10">title/summary 키워드 필터</text>
+
+        <!-- RSS 외부 -->
+        <rect x="660" y="208" width="140" height="60" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-dasharray="5,3"/>
+        <text x="730" y="230" text-anchor="middle" fill="#8b949e" font-size="11">RSS Feed</text>
+        <text x="730" y="246" text-anchor="middle" fill="#8b949e" font-size="10">discuss.ai.google.dev</text>
+        <text x="730" y="260" text-anchor="middle" fill="#8b949e" font-size="10">(feedparser)</text>
+        <line x1="593" y1="238" x2="658" y2="238" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+
+        <!-- 수집 결과 → poll.py 복귀 화살표 (오른쪽에서 왼쪽으로 되돌아오는 표시는 생략, 대신 반환 라벨) -->
+        <text x="380" y="68" text-anchor="middle" fill="#58d68d" font-size="10">항목 반환</text>
+        <text x="380" y="232" text-anchor="middle" fill="#7ab4f8" font-size="10">항목 반환</text>
+
+        <!-- 새 항목 → Discord -->
+        <line x1="263" y1="202" x2="263" y2="300" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)"/>
+        <text x="273" y="260" fill="#3fb950" font-size="10">새 항목 있을 때만</text>
+
+        <!-- Discord -->
+        <rect x="170" y="304" width="185" height="30" rx="8" fill="#21262d" stroke="#5865f2" stroke-width="1.5"/>
+        <text x="262" y="323" text-anchor="middle" fill="#5865f2" font-size="11" font-weight="600">📨 Discord Webhook 전송</text>
+
+        <!-- seen.json -->
+        <rect x="390" y="304" width="130" height="30" rx="8" fill="#21262d" stroke="#ffa657" stroke-width="1.5"/>
+        <text x="455" y="323" text-anchor="middle" fill="#ffa657" font-size="11" font-weight="600">💾 seen.json 저장</text>
+        <line x1="355" y1="319" x2="388" y2="319" stroke="#ffa657" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+
+        <!-- Git commit/push -->
+        <rect x="555" y="304" width="145" height="30" rx="8" fill="#21262d" stroke="#ffa657" stroke-width="1.5"/>
+        <text x="627" y="323" text-anchor="middle" fill="#ffa657" font-size="11" font-weight="600">📤 git commit &amp; push</text>
+        <line x1="520" y1="319" x2="553" y2="319" stroke="#ffa657" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== 3. GitHub Actions 실행 순서 ===== -->
+  <section>
+    <h2><span class="num">3</span> GitHub Actions 실행 순서 (poll.yml)</h2>
+    <p style="color:var(--muted); margin-bottom:16px;">매 30분마다 아래 단계가 순서대로 실행됩니다.</p>
+
+    <ul class="steps">
+      <li>
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>트리거: 스케줄 또는 수동</strong>
+          <p>크론 표현식 <code>*/30 * * * *</code> — 매 시간 0분, 30분에 자동 실행됩니다. <code>workflow_dispatch</code>로 GitHub UI에서 수동 실행도 가능합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>코드 체크아웃</strong>
+          <p><code>actions/checkout@v4</code> — 레포의 현재 main 브랜치를 Ubuntu 러너에 복사합니다. <code>seen.json</code>도 이 시점에 함께 내려옵니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Python 3.11 설치 + pip 캐시 복원</strong>
+          <p><code>actions/cache@v4</code>로 <code>requirements.txt</code>의 해시를 키 삼아 pip 캐시를 복원합니다. 의존성이 변경되지 않았으면 설치를 건너뜁니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>poll.py 실행</strong>
+          <p>핵심 단계. 환경변수로 <code>DISCORD_WEBHOOK_URL</code>, <code>GITHUB_TOKEN_CUSTOM</code> 두 시크릿을 주입한 뒤 실행합니다.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <strong>seen.json 커밋 & 푸시</strong>
+          <p>새 항목이 있었을 경우 <code>seen.json</code>이 변경되어 있습니다. <code>git pull --rebase</code> 후 변경분을 커밋하고 main에 push합니다. 변경이 없으면 커밋하지 않습니다.</p>
+        </div>
+      </li>
+    </ul>
+
+    <pre><span class="cm"># poll.yml 핵심 부분</span>
+<span class="kw">on</span>:
+  schedule:
+    - cron: <span class="st">'*/30 * * * *'</span>   <span class="cm"># 30분마다</span>
+  workflow_dispatch:           <span class="cm"># 수동 실행도 허용</span>
+
+<span class="kw">steps</span>:
+  - <span class="kw">run</span>: python poll.py
+    <span class="kw">env</span>:
+      DISCORD_WEBHOOK_URL: <span class="nm">${{ secrets.DISCORD_WEBHOOK_URL }}</span>
+      GITHUB_TOKEN_CUSTOM: <span class="nm">${{ secrets.GITHUB_TOKEN_CUSTOM }}</span>
+
+  - <span class="kw">run</span>: |
+      git pull --rebase origin main   <span class="cm"># 충돌 방지</span>
+      git add seen.json
+      git diff --staged --quiet || git commit -m <span class="st">"chore: update seen.json"</span>
+      git push</pre>
+  </section>
+
+  <!-- ===== 4. poll.py 로직 ===== -->
+  <section>
+    <h2><span class="num">4</span> poll.py — 메인 로직 상세</h2>
+
+    <div class="flow">
+      <div class="flow-row">
+        <div class="flow-box action">실행 시작</div>
+        <div class="arrow">→</div>
+        <div class="flow-box python">seen.json 로드<br><small style="color:var(--muted)">구 형식이면 자동 마이그레이션</small></div>
+        <div class="arrow">→</div>
+        <div class="flow-box github-src">github_issues.fetch("batch")</div>
+        <div class="arrow">→</div>
+        <div class="flow-box forum-src">forum_rss.fetch("batch")</div>
+      </div>
+      <div class="arrow-down">↓</div>
+      <div class="flow-row">
+        <div class="flow-box python">run 내 중복 제거<br><small style="color:var(--muted)">같은 ID는 한 번만</small></div>
+        <div class="arrow">→</div>
+        <div class="flow-box decision">seen에 없는<br>새 항목?</div>
+        <div class="arrow" style="color:var(--green)">→ 있음</div>
+        <div class="flow-box discord">discord.send(new_items)</div>
+        <div class="arrow">→</div>
+        <div class="flow-box git">seen 업데이트<br>+ 저장</div>
+      </div>
+      <div style="padding: 8px 0 0 200px; color: var(--pink); font-size: 13px;">↓ 없음 → 스킵 (Discord 전송 없음)</div>
+    </div>
+
+    <h3>seen.json 데이터 구조</h3>
+    <p style="color:var(--muted); margin-bottom: 10px;">항목을 이미 알림 보냈는지 추적하는 파일입니다. 90일이 지난 항목은 자동 삭제됩니다.</p>
+    <div class="json-vis">
+      <span class="json-brace">{</span><br>
+      &nbsp;&nbsp;<span class="json-key">"github-googleapis/js-genai-42"</span>: <span class="json-val">"2026-04-10T09:32:00+00:00"</span>,<br>
+      &nbsp;&nbsp;<span class="json-key">"github-google/generative-ai-python-88"</span>: <span class="json-val">"2026-04-15T14:11:22+00:00"</span>,<br>
+      &nbsp;&nbsp;<span class="json-key">"forum-https://discuss.ai.google.dev/t/12345"</span>: <span class="json-val">"2026-04-18T01:00:00+00:00"</span>,<br>
+      &nbsp;&nbsp;<span class="json-old">"github-googleapis/js-genai-3"</span>: <span class="json-old">"2026-01-01T00:00:00+00:00"</span>&nbsp;&nbsp;<span class="cm">← 90일 초과 → 자동 삭제</span><br>
+      <span class="json-brace">}</span>
+    </div>
+
+    <h3>ID 포맷 규칙</h3>
+    <table>
+      <thead><tr><th>소스</th><th>ID 형식</th><th>예시</th></tr></thead>
+      <tbody>
+        <tr><td>GitHub Issues</td><td><code>github-{org}/{repo}-{issue번호}</code></td><td><code>github-googleapis/js-genai-42</code></td></tr>
+        <tr><td>Google Dev Forum</td><td><code>forum-{entry.id 또는 link URL}</code></td><td><code>forum-https://discuss.ai.google.dev/t/12345</code></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== 5. GitHub 소스 ===== -->
+  <section>
+    <h2><span class="num">5</span> github_issues.py — GitHub 이슈 수집</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3 style="margin-top:0">모니터링 레포 (3개)</h3>
+        <ul style="list-style:none; color:var(--muted); font-size:13px; line-height:2">
+          <li>🐙 <code>googleapis/js-genai</code></li>
+          <li>🐙 <code>google/generative-ai-python</code></li>
+          <li>🐙 <code>google-gemini/cookbook</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">API 요청 파라미터</h3>
+        <table>
+          <tr><td style="color:var(--muted)">state</td><td><code>all</code> (open + closed)</td></tr>
+          <tr><td style="color:var(--muted)">per_page</td><td><code>100</code></td></tr>
+          <tr><td style="color:var(--muted)">sort</td><td><code>updated</code></td></tr>
+          <tr><td style="color:var(--muted)">direction</td><td><code>desc</code></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h3>처리 흐름</h3>
+    <pre><span class="kw">for</span> repo <span class="kw">in</span> REPOS:                          <span class="cm"># 레포 3개를 순회</span>
+    resp = requests.get(GITHUB_API, ...)        <span class="cm"># GitHub REST API 호출</span>
+    <span class="kw">for</span> issue <span class="kw">in</span> resp.json():
+        <span class="kw">if</span> <span class="st">"pull_request"</span> <span class="kw">in</span> issue:
+            <span class="kw">continue</span>                            <span class="cm"># PR은 건너뜀</span>
+        title = issue[<span class="st">"title"</span>].lower()
+        body  = issue[<span class="st">"body"</span>].lower()
+        <span class="kw">if</span> keyword <span class="kw">in</span> title <span class="kw">or</span> keyword <span class="kw">in</span> body: <span class="cm"># "batch" 포함 여부 확인</span>
+            results.append({...})               <span class="cm"># 결과에 추가</span></pre>
+
+    <div class="note">
+      <strong>인증 처리:</strong> <code>GITHUB_TOKEN_CUSTOM</code> 시크릿이 설정되어 있으면 인증 헤더를 추가합니다.
+      미설정 시 시간당 60회, 설정 시 시간당 5,000회 API 요청이 허용됩니다.
+      현재 30분마다 3개 레포 = 시간당 6회 요청이므로 미설정 상태에서도 여유 있습니다.
+    </div>
+  </section>
+
+  <!-- ===== 6. Forum 소스 ===== -->
+  <section>
+    <h2><span class="num">6</span> forum_rss.py — 포럼 RSS 수집</h2>
+
+    <div class="card">
+      <table>
+        <tr><th>피드 이름</th><th>RSS URL</th><th>라이브러리</th></tr>
+        <tr>
+          <td>Google Dev Forum</td>
+          <td><code>https://discuss.ai.google.dev/c/gemini-api/4.rss</code></td>
+          <td><code>feedparser</code></td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>처리 흐름</h3>
+    <pre><span class="kw">for</span> feed_name, rss_url <span class="kw">in</span> RSS_FEEDS:
+    feed = feedparser.parse(rss_url)         <span class="cm"># RSS XML 파싱</span>
+    <span class="kw">if</span> feed.bozo <span class="kw">and not</span> feed.entries:
+        <span class="kw">continue</span>                             <span class="cm"># 파싱 실패 감지 후 건너뜀</span>
+    <span class="kw">for</span> entry <span class="kw">in</span> feed.entries:
+        title   = entry[<span class="st">"title"</span>].lower()
+        summary = entry[<span class="st">"summary"</span>].lower()
+        <span class="kw">if</span> keyword <span class="kw">in</span> title <span class="kw">or</span> keyword <span class="kw">in</span> summary:
+            results.append({...})</pre>
+
+    <div class="note">
+      <strong>feed.bozo란?</strong> feedparser가 RSS 파싱 중 오류를 감지하면 <code>bozo=True</code>로 표시합니다.
+      <code>entries</code>가 비어 있을 때만 오류로 처리하여, 부분 파싱된 항목은 계속 활용합니다.
+    </div>
+  </section>
+
+  <!-- ===== 7. Discord 알림 ===== -->
+  <section>
+    <h2><span class="num">7</span> discord.py — Discord 알림 전송</h2>
+
+    <h3>Embed 구조</h3>
+    <p style="color:var(--muted); margin-bottom:10px;">각 항목 하나가 Discord Embed 하나가 됩니다.</p>
+    <div class="json-vis">
+      <span class="json-brace">{</span><br>
+      &nbsp;&nbsp;<span class="json-key">"content"</span>: <span class="json-val">"🔍 **Gemini Batch API 관련 새 글 N개**"</span>,&nbsp;&nbsp;<span class="cm">← 첫 번째 메시지에만 표시</span><br>
+      &nbsp;&nbsp;<span class="json-key">"embeds"</span>: <span class="json-brace">[</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-brace">{</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"title"</span>:       <span class="json-val">"이슈 제목 (최대 256자)"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"url"</span>:         <span class="json-val">"https://github.com/..."</span>,&nbsp;&nbsp;<span class="cm">← 클릭 가능</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"description"</span>: <span class="json-val">"GitHub (googleapis/js-genai)"</span>,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="json-key">"color"</span>:       <span class="json-val">0x24292e</span>&nbsp;&nbsp;<span class="cm">← 소스별 색상</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-brace">}</span><br>
+      &nbsp;&nbsp;<span class="json-brace">]</span><br>
+      <span class="json-brace">}</span>
+    </div>
+
+    <h3>메시지 분할 로직</h3>
+    <p style="color:var(--muted); margin-bottom:10px;">Discord는 메시지당 최대 10개 Embed만 허용합니다. 초과 시 자동으로 여러 메시지로 분할합니다.</p>
+    <div class="flow" style="flex-direction:row; flex-wrap:wrap; gap:8px; align-items:center">
+      <div class="flow-box action" style="font-size:12px">새 항목 N개</div>
+      <div class="arrow">→</div>
+      <div class="flow-box python" style="font-size:12px">Embed 생성<br>(N개)</div>
+      <div class="arrow">→</div>
+      <div class="flow-box python" style="font-size:12px">10개씩 분할<br>chunks</div>
+      <div class="arrow">→</div>
+      <div class="flow-box discord" style="font-size:12px">POST 반복<br>× ceil(N/10)회</div>
+    </div>
+
+    <h3>소스별 색상 구분</h3>
+    <table>
+      <thead><tr><th>소스</th><th>색상</th><th>HEX</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>GitHub Issues</td>
+          <td><span style="background:#24292e; color:#fff; padding:2px 10px; border-radius:4px; font-size:12px">■ 다크</span></td>
+          <td><code>#24292e</code></td>
+        </tr>
+        <tr>
+          <td>Google Dev Forum</td>
+          <td><span style="background:#4285f4; color:#fff; padding:2px 10px; border-radius:4px; font-size:12px">■ 구글 블루</span></td>
+          <td><code>#4285f4</code></td>
+        </tr>
+        <tr>
+          <td>기타</td>
+          <td><span style="background:#5865f2; color:#fff; padding:2px 10px; border-radius:4px; font-size:12px">■ Discord 보라</span></td>
+          <td><code>#5865f2</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== 8. 환경변수 & 시크릿 ===== -->
+  <section>
+    <h2><span class="num">8</span> 환경변수 & GitHub Secrets</h2>
+    <table>
+      <thead><tr><th>변수명</th><th>설정 위치</th><th>필수</th><th>용도</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>DISCORD_WEBHOOK_URL</code></td>
+          <td>GitHub Secrets</td>
+          <td style="color:var(--red)">필수</td>
+          <td>Discord 채널 웹훅 URL. 없으면 알림이 전송되지 않습니다.</td>
+        </tr>
+        <tr>
+          <td><code>GITHUB_TOKEN_CUSTOM</code></td>
+          <td>GitHub Secrets</td>
+          <td style="color:var(--muted)">선택</td>
+          <td>GitHub API 인증 토큰. 없으면 시간당 60회 제한, 있으면 5,000회.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="warn">
+      <strong>주의:</strong> 기본 <code>GITHUB_TOKEN</code>은 Actions에서 자동 제공되지만, 이 프로젝트는 별도의 <code>GITHUB_TOKEN_CUSTOM</code>을 사용합니다.
+      Settings → Secrets and variables → Actions에서 등록해야 합니다.
+    </div>
+  </section>
+
+  <!-- ===== 9. 데이터 흐름 요약 ===== -->
+  <section>
+    <h2><span class="num">9</span> 한눈에 보는 데이터 흐름</h2>
+
+    <div class="card">
+      <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:13px;">
+        <span style="color:var(--yellow)">⏱ cron 30분</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--accent)">Actions 러너 시작</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--purple)">poll.py 실행</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:#58d68d)">GitHub API 3회 요청</span>
+        <span style="color:var(--muted)">+</span>
+        <span style="color:#7ab4f8">RSS 파싱 1회</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--pink)">"batch" 필터</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--pink)">seen.json과 비교</span>
+        <br style="width:100%">
+        <span style="color:var(--green)">새 항목 있음</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:#5865f2">Discord Embed 전송</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--orange)">seen.json 업데이트</span>
+        <span style="color:var(--muted)">→</span>
+        <span style="color:var(--orange)">git commit &amp; push</span>
+        <span style="color:var(--muted)">(90일 지난 항목 자동 정리)</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="color:var(--muted); font-size:12px; text-align:center; padding-top:24px; border-top:1px solid var(--border);">
+    Gemini Batch Tracker &mdash; 자동 생성 문서
+  </footer>
+
+</div>
+</body>
+</html>

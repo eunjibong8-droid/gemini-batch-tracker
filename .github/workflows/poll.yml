@@ -8,31 +8,41 @@ on:
 jobs:
   poll:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
-    
+
     steps:
       - name: 코드 체크아웃
         uses: actions/checkout@v4
-      
+
       - name: Python 설치
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      
+
+      - name: pip 캐시 설정
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
       - name: 의존성 설치
         run: pip install -r requirements.txt
-      
+
       - name: 폴러 실행
         run: python poll.py
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-      
+          GITHUB_TOKEN_CUSTOM: ${{ secrets.GITHUB_TOKEN_CUSTOM }}
+
       - name: seen.json 업데이트 커밋
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add seen.json
           git diff --staged --quiet || git commit -m "chore: update seen.json"
           git push
