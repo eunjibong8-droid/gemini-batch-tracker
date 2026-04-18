@@ -17,19 +17,24 @@ def _make_headers() -> dict:
         headers["Authorization"] = f"Bearer {token}"
     return headers
 
-def fetch(keyword: str) -> list[dict]:
-    """여러 GitHub 레포의 Issues에서 keyword 포함된 항목 반환."""
+def fetch(keyword: str, since: str = None) -> list[dict]:
+    """여러 GitHub 레포의 Issues에서 keyword 포함된 항목 반환.
+    since: ISO 8601 형식 문자열 (예: '2026-04-11T00:00:00Z') — 이 날짜 이후 업데이트된 항목만 반환
+    """
     headers = _make_headers()
     results = []
 
     for repo in REPOS:
         url = GITHUB_API.format(repo=repo)
         params = {
-            "state":     "all",       # open + closed 모두 확인
+            "state":     "all",
             "per_page":  100,
             "sort":      "updated",
             "direction": "desc",
         }
+        if since:
+            params["since"] = since
+
         try:
             resp = requests.get(url, headers=headers, params=params, timeout=10)
             resp.raise_for_status()

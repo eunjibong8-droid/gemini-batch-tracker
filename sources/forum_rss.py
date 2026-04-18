@@ -1,12 +1,16 @@
+import calendar
 import feedparser
+from datetime import datetime, timezone
 
 # 모니터링할 RSS 피드 목록 (이름, URL)
 RSS_FEEDS = [
     ("Google Dev Forum", "https://discuss.ai.google.dev/c/gemini-api/4.rss"),
 ]
 
-def fetch(keyword: str) -> list[dict]:
-    """RSS 피드에서 keyword 포함된 항목 반환."""
+def fetch(keyword: str, since: datetime = None) -> list[dict]:
+    """RSS 피드에서 keyword 포함된 항목 반환.
+    since: datetime (timezone-aware) — 이 시각 이후 게시된 항목만 반환
+    """
     results = []
 
     for feed_name, rss_url in RSS_FEEDS:
@@ -22,6 +26,16 @@ def fetch(keyword: str) -> list[dict]:
 
         feed_count = 0
         for entry in feed.entries:
+            # 날짜 필터링
+            if since is not None:
+                published = entry.get("published_parsed")
+                if published:
+                    entry_dt = datetime.utcfromtimestamp(
+                        calendar.timegm(published)
+                    ).replace(tzinfo=timezone.utc)
+                    if entry_dt < since:
+                        continue
+
             title   = entry.get("title", "").lower()
             summary = entry.get("summary", "").lower()
 
