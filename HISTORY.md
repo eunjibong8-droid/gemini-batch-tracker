@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-04-19 18:06 UTC
+- 💬 **[Google Dev Forum]** [Критический баг: Ошибка 500 и сброс тиров (Tier 3 -> Tier 1) после обновления 15 апреля](https://discuss.ai.google.dev/t/500-tier-3-tier-1-15/141119)
+
 ## 2026-04-18 10:27 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch API - Progress Tracking](https://discuss.ai.google.dev/t/gemini-batch-api-progress-tracking/140890)
 - 💬 **[Google Dev Forum]** [Gemini Batch API vs Streaming API — Reliability](https://discuss.ai.google.dev/t/gemini-batch-api-vs-streaming-api-reliability/140889)
