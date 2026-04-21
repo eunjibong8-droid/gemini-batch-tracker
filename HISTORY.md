@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-04-21 19:55 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [BatchPredictor: Efficient Long-Context Processing with Parallel Chunk Processing and Answer Synthesis](https://github.com/google-gemini/cookbook/issues/701)
+
 ## 2026-04-19 18:06 UTC
 - 💬 **[Google Dev Forum]** [Критический баг: Ошибка 500 и сброс тиров (Tier 3 -> Tier 1) после обновления 15 апреля](https://discuss.ai.google.dev/t/500-tier-3-tier-1-15/141119)
 
