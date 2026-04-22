@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-04-22 10:49 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [Batch mode support for Gemini TTS API](https://github.com/google-gemini/cookbook/issues/926)
+- 💬 **[Google Dev Forum]** [File storage quota per project - 100% Usage despite all files being deleted](https://discuss.ai.google.dev/t/file-storage-quota-per-project-100-usage-despite-all-files-being-deleted/141799)
+
 ## 2026-04-21 19:55 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [BatchPredictor: Efficient Long-Context Processing with Parallel Chunk Processing and Answer Synthesis](https://github.com/google-gemini/cookbook/issues/701)
 
