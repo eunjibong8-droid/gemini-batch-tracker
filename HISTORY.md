@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-04-27 20:00 UTC
+- 🐙 **[GitHub (google/generative-ai-python)]** [Batched inputs to genai python api](https://github.com/google-gemini/deprecated-generative-ai-python/issues/555)
+
 ## 2026-04-22 10:49 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [Batch mode support for Gemini TTS API](https://github.com/google-gemini/cookbook/issues/926)
 - 💬 **[Google Dev Forum]** [File storage quota per project - 100% Usage despite all files being deleted](https://discuss.ai.google.dev/t/file-storage-quota-per-project-100-usage-despite-all-files-being-deleted/141799)
