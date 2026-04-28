@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-04-28 20:50 UTC
+- 💬 **[Google Dev Forum]** [New RECITATION false positives in public domain works](https://discuss.ai.google.dev/t/new-recitation-false-positives-in-public-domain-works/142749)
+
 ## 2026-04-27 20:00 UTC
 - 🐙 **[GitHub (google/generative-ai-python)]** [Batched inputs to genai python api](https://github.com/google-gemini/deprecated-generative-ai-python/issues/555)
 
