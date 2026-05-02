@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-02 17:11 UTC
+- 💬 **[Google Dev Forum]** [Does Gemini AI Studio ignore batch requests, also forgotting to bill them?](https://discuss.ai.google.dev/t/does-gemini-ai-studio-ignore-batch-requests-also-forgotting-to-bill-them/143201)
+
 ## 2026-04-28 20:50 UTC
 - 💬 **[Google Dev Forum]** [New RECITATION false positives in public domain works](https://discuss.ai.google.dev/t/new-recitation-false-positives-in-public-domain-works/142749)
 
