@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-02 20:00 UTC
+- 💬 **[Google Dev Forum]** [Tier 1 / AI Studio — gemini-2.5-flash 429 RESOURCE_EXHAUSTED at <100 tokens with ~0% dashboard usage](https://discuss.ai.google.dev/t/tier-1-ai-studio-gemini-2-5-flash-429-resource-exhausted-at-100-tokens-with-0-dashboard-usage/143223)
+
 ## 2026-05-02 17:11 UTC
 - 💬 **[Google Dev Forum]** [Does Gemini AI Studio ignore batch requests, also forgotting to bill them?](https://discuss.ai.google.dev/t/does-gemini-ai-studio-ignore-batch-requests-also-forgotting-to-bill-them/143201)
 
