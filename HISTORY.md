@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-05-06 16:11 UTC
+- 💬 **[Google Dev Forum]** [Gemini Batch API invalid JSON when finish_reason is MAX_TOKENS](https://discuss.ai.google.dev/t/gemini-batch-api-invalid-json-when-finish-reason-is-max-tokens/143697)
+- 💬 **[Google Dev Forum]** [Feature Request: Support Webhooks for generateContent (Async Video Moderation)](https://discuss.ai.google.dev/t/feature-request-support-webhooks-for-generatecontent-async-video-moderation/143674)
+
 ## 2026-05-02 20:00 UTC
 - 💬 **[Google Dev Forum]** [Tier 1 / AI Studio — gemini-2.5-flash 429 RESOURCE_EXHAUSTED at <100 tokens with ~0% dashboard usage](https://discuss.ai.google.dev/t/tier-1-ai-studio-gemini-2-5-flash-429-resource-exhausted-at-100-tokens-with-0-dashboard-usage/143223)
 
