@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-10 08:22 UTC
+- 💬 **[Google Dev Forum]** [Batch API is flaky for 24h+](https://discuss.ai.google.dev/t/batch-api-is-flaky-for-24h/144217)
+
 ## 2026-05-06 16:11 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch API invalid JSON when finish_reason is MAX_TOKENS](https://discuss.ai.google.dev/t/gemini-batch-api-invalid-json-when-finish-reason-is-max-tokens/143697)
 - 💬 **[Google Dev Forum]** [Feature Request: Support Webhooks for generateContent (Async Video Moderation)](https://discuss.ai.google.dev/t/feature-request-support-webhooks-for-generatecontent-async-video-moderation/143674)
