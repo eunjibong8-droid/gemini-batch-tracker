@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-12 21:51 UTC
+- 💬 **[Google Dev Forum]** [Gemini BatchAPI Thinking Level Capabilities](https://discuss.ai.google.dev/t/gemini-batchapi-thinking-level-capabilities/144565)
+
 ## 2026-05-10 08:22 UTC
 - 💬 **[Google Dev Forum]** [Batch API is flaky for 24h+](https://discuss.ai.google.dev/t/batch-api-is-flaky-for-24h/144217)
 
