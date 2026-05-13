@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-05-13 08:21 UTC
+- 💬 **[Google Dev Forum]** [Persistent 429 RESOURCE_EXHAUSTED on Batch API creation (Tier 1, gemini-2.5-flash-lite)](https://discuss.ai.google.dev/t/persistent-429-resource-exhausted-on-batch-api-creation-tier-1-gemini-2-5-flash-lite/144645)
+- 💬 **[Google Dev Forum]** [Grounding free quota — clarifying 2026 rules for Gemini 2.5 Flash (paid Tier 1)](https://discuss.ai.google.dev/t/grounding-free-quota-clarifying-2026-rules-for-gemini-2-5-flash-paid-tier-1/144593)
+
 ## 2026-05-12 21:51 UTC
 - 💬 **[Google Dev Forum]** [Gemini BatchAPI Thinking Level Capabilities](https://discuss.ai.google.dev/t/gemini-batchapi-thinking-level-capabilities/144565)
 
