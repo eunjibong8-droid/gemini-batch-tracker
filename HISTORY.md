@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-17 10:09 UTC
+- 💬 **[Google Dev Forum]** [400 INVALID_ARGUMENT unexpected character: '\x00'; expected '{'",](https://discuss.ai.google.dev/t/400-invalid-argument-unexpected-character-x00-expected/145070)
+
 ## 2026-05-15 00:13 UTC
 - 💬 **[Google Dev Forum]** [Gemini batch grounding requests went from 5000 free requests per day to 5000 per month](https://discuss.ai.google.dev/t/gemini-batch-grounding-requests-went-from-5000-free-requests-per-day-to-5000-per-month/144854)
 
