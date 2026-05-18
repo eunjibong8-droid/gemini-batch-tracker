@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-18 04:09 UTC
+- 💬 **[Google Dev Forum]** [Podcast API allowlist access request — project okaiok-cad-education-platform](https://discuss.ai.google.dev/t/podcast-api-allowlist-access-request-project-okaiok-cad-education-platform/145162)
+
 ## 2026-05-17 10:09 UTC
 - 💬 **[Google Dev Forum]** [400 INVALID_ARGUMENT unexpected character: '\x00'; expected '{'",](https://discuss.ai.google.dev/t/400-invalid-argument-unexpected-character-x00-expected/145070)
 
