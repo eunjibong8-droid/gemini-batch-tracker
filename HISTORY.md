@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-20 22:25 UTC
+- 💬 **[Google Dev Forum]** [Update on Error 253 / Generation Failures](https://discuss.ai.google.dev/t/update-on-error-253-generation-failures/146576)
+
 ## 2026-05-19 19:05 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch API no longer returns promptTokenCount / totalTokenCount in usageMetadata](https://discuss.ai.google.dev/t/gemini-batch-api-no-longer-returns-prompttokencount-totaltokencount-in-usagemetadata/145395)
 
