@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-22 01:30 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [Batch API with gemini-3-flash-preview stays PENDING indefinitely for audio input despite audio being listed in batch pricing](https://github.com/google-gemini/cookbook/issues/1235)
+
 ## 2026-05-20 22:25 UTC
 - 💬 **[Google Dev Forum]** [Update on Error 253 / Generation Failures](https://discuss.ai.google.dev/t/update-on-error-253-generation-failures/146576)
 
