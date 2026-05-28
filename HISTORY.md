@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-05-28 08:45 UTC
+- 💬 **[Google Dev Forum]** [Gemini-3.5-flash usage incorrectly reported (and billed?) as Gemini 3.1 Pro in Google AI Studio](https://discuss.ai.google.dev/t/gemini-3-5-flash-usage-incorrectly-reported-and-billed-as-gemini-3-1-pro-in-google-ai-studio/167339)
+
 ## 2026-05-22 01:30 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [Batch API with gemini-3-flash-preview stays PENDING indefinitely for audio input despite audio being listed in batch pricing](https://github.com/google-gemini/cookbook/issues/1235)
 
