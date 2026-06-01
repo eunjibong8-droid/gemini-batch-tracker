@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-01 01:40 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [Monthly issue metrics report](https://github.com/google-gemini/cookbook/issues/1252)
+
 ## 2026-05-28 08:45 UTC
 - 💬 **[Google Dev Forum]** [Gemini-3.5-flash usage incorrectly reported (and billed?) as Gemini 3.1 Pro in Google AI Studio](https://discuss.ai.google.dev/t/gemini-3-5-flash-usage-incorrectly-reported-and-billed-as-gemini-3-1-pro-in-google-ai-studio/167339)
 
