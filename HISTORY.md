@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-04 23:12 UTC
+- 💬 **[Google Dev Forum]** [Gemini API Batch Processing Stucks](https://discuss.ai.google.dev/t/gemini-api-batch-processing-stucks/169476)
+
 ## 2026-06-04 14:06 UTC
 - 💬 **[Google Dev Forum]** [thinkingLevel: 'low' producing unpredictable 60k+ thought-token spikes on trivial prompts - systemic billing impact](https://discuss.ai.google.dev/t/thinkinglevel-low-producing-unpredictable-60k-thought-token-spikes-on-trivial-prompts-systemic-billing-impact/169408)
 
