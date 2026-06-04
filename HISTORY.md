@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-04 07:06 UTC
+- 💬 **[Google Dev Forum]** [Google Ai Studio -Batch API ISSUE](https://discuss.ai.google.dev/t/google-ai-studio-batch-api-issue/169347)
+
 ## 2026-06-01 01:40 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [Monthly issue metrics report](https://github.com/google-gemini/cookbook/issues/1252)
 
