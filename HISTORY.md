@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-04 14:06 UTC
+- 💬 **[Google Dev Forum]** [thinkingLevel: 'low' producing unpredictable 60k+ thought-token spikes on trivial prompts - systemic billing impact](https://discuss.ai.google.dev/t/thinkinglevel-low-producing-unpredictable-60k-thought-token-spikes-on-trivial-prompts-systemic-billing-impact/169408)
+
 ## 2026-06-04 07:06 UTC
 - 💬 **[Google Dev Forum]** [Google Ai Studio -Batch API ISSUE](https://discuss.ai.google.dev/t/google-ai-studio-batch-api-issue/169347)
 
