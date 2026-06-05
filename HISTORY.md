@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-05 06:36 UTC
+- 💬 **[Google Dev Forum]** [Batch API is taking longer than 24h (gemini-3-pro)](https://discuss.ai.google.dev/t/batch-api-is-taking-longer-than-24h-gemini-3-pro/169530)
+
 ## 2026-06-04 23:12 UTC
 - 💬 **[Google Dev Forum]** [Gemini API Batch Processing Stucks](https://discuss.ai.google.dev/t/gemini-api-batch-processing-stucks/169476)
 
