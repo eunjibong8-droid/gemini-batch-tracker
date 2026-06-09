@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-09 11:40 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** `closed` [Add example notebook: Cost & latency optimization patterns (tokens, streaming, Batch API, model choice)](https://github.com/google-gemini/cookbook/issues/1105)
+
 ## 2026-06-05 06:36 UTC
 - 💬 **[Google Dev Forum]** [Batch API is taking longer than 24h (gemini-3-pro)](https://discuss.ai.google.dev/t/batch-api-is-taking-longer-than-24h-gemini-3-pro/169530)
 
