@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-11 13:01 UTC
+- 💬 **[Google Dev Forum]** [USing webhook with gemini Nano Banana](https://discuss.ai.google.dev/t/using-webhook-with-gemini-nano-banana/170839)
+
 ## 2026-06-09 11:40 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** `closed` [Add example notebook: Cost & latency optimization patterns (tokens, streaming, Batch API, model choice)](https://github.com/google-gemini/cookbook/issues/1105)
 
