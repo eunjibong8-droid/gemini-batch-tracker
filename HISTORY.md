@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-12 05:19 UTC
+- 💬 **[Google Dev Forum]** [How to generate several image to image at once using Gemini Api](https://discuss.ai.google.dev/t/how-to-generate-several-image-to-image-at-once-using-gemini-api/170930)
+
 ## 2026-06-11 13:01 UTC
 - 💬 **[Google Dev Forum]** [USing webhook with gemini Nano Banana](https://discuss.ai.google.dev/t/using-webhook-with-gemini-nano-banana/170839)
 
