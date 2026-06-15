@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-15 17:32 UTC
+- 🐙 **[GitHub (googleapis/js-genai)]** [Support Vertex AI batch behavior for inline requests](https://github.com/googleapis/js-genai/issues/1683)
+
 ## 2026-06-12 05:19 UTC
 - 💬 **[Google Dev Forum]** [How to generate several image to image at once using Gemini Api](https://discuss.ai.google.dev/t/how-to-generate-several-image-to-image-at-once-using-gemini-api/170930)
 
