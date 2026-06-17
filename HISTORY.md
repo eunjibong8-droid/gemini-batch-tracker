@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-17 07:35 UTC
+- 💬 **[Google Dev Forum]** [Gemini-embedding-2-preview returns HTTP 200 with empty values for video (batchEmbedContents)](https://discuss.ai.google.dev/t/gemini-embedding-2-preview-returns-http-200-with-empty-values-for-video-batchembedcontents/171558)
+
 ## 2026-06-15 17:32 UTC
 - 🐙 **[GitHub (googleapis/js-genai)]** [Support Vertex AI batch behavior for inline requests](https://github.com/googleapis/js-genai/issues/1683)
 
