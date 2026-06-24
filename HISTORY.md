@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-06-24 04:02 UTC
+- 💬 **[Google Dev Forum]** [Request to restore Gemini API access — "project has been denied access" (403 PERMISSION_DENIED)](https://discuss.ai.google.dev/t/request-to-restore-gemini-api-access-project-has-been-denied-access-403-permission-denied/172428)
+
 ## 2026-06-17 07:35 UTC
 - 💬 **[Google Dev Forum]** [Gemini-embedding-2-preview returns HTTP 200 with empty values for video (batchEmbedContents)](https://discuss.ai.google.dev/t/gemini-embedding-2-preview-returns-http-200-with-empty-values-for-video-batchembedcontents/171558)
 
