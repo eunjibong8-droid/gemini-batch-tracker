@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-02 19:38 UTC
+- 💬 **[Google Dev Forum]** [[Ultra Subscriber] Google Flow Agent Mode batch generation failing with "Something went wrong" for 5+ days — credits deducted, zero output](https://discuss.ai.google.dev/t/ultra-subscriber-google-flow-agent-mode-batch-generation-failing-with-something-went-wrong-for-5-days-credits-deducted-zero-output/173355)
+
 ## 2026-06-24 04:02 UTC
 - 💬 **[Google Dev Forum]** [Request to restore Gemini API access — "project has been denied access" (403 PERMISSION_DENIED)](https://discuss.ai.google.dev/t/request-to-restore-gemini-api-access-project-has-been-denied-access-403-permission-denied/172428)
 
