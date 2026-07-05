@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-05 07:33 UTC
+- 💬 **[Google Dev Forum]** [Gemini Batch API - Unable to retrieve results](https://discuss.ai.google.dev/t/gemini-batch-api-unable-to-retrieve-results/173613)
+
 ## 2026-07-02 19:38 UTC
 - 💬 **[Google Dev Forum]** [[Ultra Subscriber] Google Flow Agent Mode batch generation failing with "Something went wrong" for 5+ days — credits deducted, zero output](https://discuss.ai.google.dev/t/ultra-subscriber-google-flow-agent-mode-batch-generation-failing-with-something-went-wrong-for-5-days-credits-deducted-zero-output/173355)
 
