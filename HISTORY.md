@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-06 04:53 UTC
+- 💬 **[Google Dev Forum]** [Content policy clarification — commercial photo-to-illustration  service for children's portraits](https://discuss.ai.google.dev/t/content-policy-clarification-commercial-photo-to-illustration-service-for-childrens-portraits/173786)
+
 ## 2026-07-05 07:33 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch API - Unable to retrieve results](https://discuss.ai.google.dev/t/gemini-batch-api-unable-to-retrieve-results/173613)
 
