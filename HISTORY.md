@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-07 13:35 UTC
+- 💬 **[Google Dev Forum]** [Persistent 500 INTERNAL Server Errors from Gemini API (generate_content) - Requesting Assistance](https://discuss.ai.google.dev/t/persistent-500-internal-server-errors-from-gemini-api-generate-content-requesting-assistance/173966)
+
 ## 2026-07-06 04:53 UTC
 - 💬 **[Google Dev Forum]** [Content policy clarification — commercial photo-to-illustration  service for children's portraits](https://discuss.ai.google.dev/t/content-policy-clarification-commercial-photo-to-illustration-service-for-childrens-portraits/173786)
 
