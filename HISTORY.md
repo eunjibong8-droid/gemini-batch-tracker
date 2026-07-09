@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-09 08:31 UTC
+- 💬 **[Google Dev Forum]** [Requesting allowlist access for lyria-3-pro-preview and lyria-3-clip-preview](https://discuss.ai.google.dev/t/requesting-allowlist-access-for-lyria-3-pro-preview-and-lyria-3-clip-preview/174151)
+
 ## 2026-07-07 13:35 UTC
 - 💬 **[Google Dev Forum]** [Persistent 500 INTERNAL Server Errors from Gemini API (generate_content) - Requesting Assistance](https://discuss.ai.google.dev/t/persistent-500-internal-server-errors-from-gemini-api-generate-content-requesting-assistance/173966)
 
