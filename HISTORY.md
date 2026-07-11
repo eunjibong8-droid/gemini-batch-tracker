@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-11 12:30 UTC
+- 💬 **[Google Dev Forum]** [Guidance request — planning a one-time OCR job for 316,000 images using Gemini 3.5](https://discuss.ai.google.dev/t/guidance-request-planning-a-one-time-ocr-job-for-316-000-images-using-gemini-3-5/174404)
+
 ## 2026-07-09 08:31 UTC
 - 💬 **[Google Dev Forum]** [Requesting allowlist access for lyria-3-pro-preview and lyria-3-clip-preview](https://discuss.ai.google.dev/t/requesting-allowlist-access-for-lyria-3-pro-preview-and-lyria-3-clip-preview/174151)
 
