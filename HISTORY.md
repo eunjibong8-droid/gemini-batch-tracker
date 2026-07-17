@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-17 16:40 UTC
+- 💬 **[Google Dev Forum]** [Gemini Batch Jobs are failing repeatitively: "Code: 13, Message: System error."](https://discuss.ai.google.dev/t/gemini-batch-jobs-are-failing-repeatitively-code-13-message-system-error/175181)
+
 ## 2026-07-17 10:18 UTC
 - 🐙 **[GitHub (googleapis/js-genai)]** [Help escalating Gemini Batch API issue](https://github.com/googleapis/js-genai/issues/1453)
 - 🐙 **[GitHub (google/generative-ai-python)]** `closed` [internal endpoint jsonPayload.endpoint points to projects/3972195257/ instead of my project](https://github.com/google-gemini/deprecated-generative-ai-python/issues/735)
