@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-18 12:29 UTC
+- 💬 **[Google Dev Forum]** [Vertex AI Batch Prediction Regression: beyond.IntrospectionClassifierResult Type Mismatch on Gemini 3 Flash Preview](https://discuss.ai.google.dev/t/vertex-ai-batch-prediction-regression-beyond-introspectionclassifierresult-type-mismatch-on-gemini-3-flash-preview/175241)
+
 ## 2026-07-17 16:40 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch Jobs are failing repeatitively: "Code: 13, Message: System error."](https://discuss.ai.google.dev/t/gemini-batch-jobs-are-failing-repeatitively-code-13-message-system-error/175181)
 
