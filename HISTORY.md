@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-07-30 13:07 UTC
+- 💬 **[Google Dev Forum]** [$13,946 in unauthorized Gemini API charges — Google's own Trust & Safety flagged the project, billing review concluded "no evidence of abuse"](https://discuss.ai.google.dev/t/13-946-in-unauthorized-gemini-api-charges-googles-own-trust-safety-flagged-the-project-billing-review-concluded-no-evidence-of-abuse/176665)
+
 ## 2026-07-18 12:29 UTC
 - 💬 **[Google Dev Forum]** [Vertex AI Batch Prediction Regression: beyond.IntrospectionClassifierResult Type Mismatch on Gemini 3 Flash Preview](https://discuss.ai.google.dev/t/vertex-ai-batch-prediction-regression-beyond-introspectionclassifierresult-type-mismatch-on-gemini-3-flash-preview/175241)
 
