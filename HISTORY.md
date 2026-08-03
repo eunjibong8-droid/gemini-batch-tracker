@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-03 03:27 UTC
+- 💬 **[Google Dev Forum]** [Are Webhooks API supported for Vertex AI batch jobs?](https://discuss.ai.google.dev/t/are-webhooks-api-supported-for-vertex-ai-batch-jobs/176983)
+
 ## 2026-07-30 13:07 UTC
 - 💬 **[Google Dev Forum]** [$13,946 in unauthorized Gemini API charges — Google's own Trust & Safety flagged the project, billing review concluded "no evidence of abuse"](https://discuss.ai.google.dev/t/13-946-in-unauthorized-gemini-api-charges-googles-own-trust-safety-flagged-the-project-billing-review-concluded-no-evidence-of-abuse/176665)
 
