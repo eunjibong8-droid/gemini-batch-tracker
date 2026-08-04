@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-04 04:45 UTC
+- 💬 **[Google Dev Forum]** [gemini-3.1-flash-lite inline Batch returns item-level INVALID_ARGUMENT while gemini-2.5-flash succeeds](https://discuss.ai.google.dev/t/gemini-3-1-flash-lite-inline-batch-returns-item-level-invalid-argument-while-gemini-2-5-flash-succeeds/177123)
+
 ## 2026-08-03 03:27 UTC
 - 💬 **[Google Dev Forum]** [Are Webhooks API supported for Vertex AI batch jobs?](https://discuss.ai.google.dev/t/are-webhooks-api-supported-for-vertex-ai-batch-jobs/176983)
 
