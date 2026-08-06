@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-06 12:26 UTC
+- 💬 **[Google Dev Forum]** [NotebookLM Bug: Intermittent Source Reading Failures & False "Missing Signature" Errors (Multi-Day QA Log)](https://discuss.ai.google.dev/t/notebooklm-bug-intermittent-source-reading-failures-false-missing-signature-errors-multi-day-qa-log/177364)
+
 ## 2026-08-04 04:45 UTC
 - 💬 **[Google Dev Forum]** [gemini-3.1-flash-lite inline Batch returns item-level INVALID_ARGUMENT while gemini-2.5-flash succeeds](https://discuss.ai.google.dev/t/gemini-3-1-flash-lite-inline-batch-returns-item-level-invalid-argument-while-gemini-2-5-flash-succeeds/177123)
 
