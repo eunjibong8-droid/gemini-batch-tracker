@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-07 13:50 UTC
+- 💬 **[Google Dev Forum]** [Why can the Gemini API in batching go into a negative balance?](https://discuss.ai.google.dev/t/why-can-the-gemini-api-in-batching-go-into-a-negative-balance/177449)
+
 ## 2026-08-06 12:26 UTC
 - 💬 **[Google Dev Forum]** [NotebookLM Bug: Intermittent Source Reading Failures & False "Missing Signature" Errors (Multi-Day QA Log)](https://discuss.ai.google.dev/t/notebooklm-bug-intermittent-source-reading-failures-false-missing-signature-errors-multi-day-qa-log/177364)
 
