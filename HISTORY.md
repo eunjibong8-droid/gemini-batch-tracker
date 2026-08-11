@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-11 16:24 UTC
+- 💬 **[Google Dev Forum]** [Gemini 2.5 Flash-Lite retirement date — different for Gemini API vs Vertex AI?](https://discuss.ai.google.dev/t/gemini-2-5-flash-lite-retirement-date-different-for-gemini-api-vs-vertex-ai/177897)
+
 ## 2026-08-11 04:01 UTC
 - 💬 **[Google Dev Forum]** [Quota increase / allowlist request for gemini-3.1-flash-image (Vertex AI, global endpoint) — production app blocked by 429 RESOURCE_EXHAUSTED](https://discuss.ai.google.dev/t/quota-increase-allowlist-request-for-gemini-3-1-flash-image-vertex-ai-global-endpoint-production-app-blocked-by-429-resource-exhausted/177826)
 
