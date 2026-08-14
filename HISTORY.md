@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-14 05:15 UTC
+- 💬 **[Google Dev Forum]** [Gemini 3.5 Flash Lite is NOT an adequate replacement for Gemini 2.5 Flash](https://discuss.ai.google.dev/t/gemini-3-5-flash-lite-is-not-an-adequate-replacement-for-gemini-2-5-flash/178218)
+
 ## 2026-08-11 16:24 UTC
 - 💬 **[Google Dev Forum]** [Gemini 2.5 Flash-Lite retirement date — different for Gemini API vs Vertex AI?](https://discuss.ai.google.dev/t/gemini-2-5-flash-lite-retirement-date-different-for-gemini-api-vs-vertex-ai/177897)
 
