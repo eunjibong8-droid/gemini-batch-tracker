@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-19 14:37 UTC
+- 💬 **[Google Dev Forum]** [videoMetadata` clipping on YouTube URLs no longer clips **audio** (frames still clipped) — ~20× token inflation on long videos](https://discuss.ai.google.dev/t/videometadata-clipping-on-youtube-urls-no-longer-clips-audio-frames-still-clipped-20x-token-inflation-on-long-videos/178970)
+
 ## 2026-08-14 05:15 UTC
 - 💬 **[Google Dev Forum]** [Gemini 3.5 Flash Lite is NOT an adequate replacement for Gemini 2.5 Flash](https://discuss.ai.google.dev/t/gemini-3-5-flash-lite-is-not-an-adequate-replacement-for-gemini-2-5-flash/178218)
 
