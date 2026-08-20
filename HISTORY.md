@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-20 04:08 UTC
+- 💬 **[Google Dev Forum]** [​Gemini Vision falsely identifying Morpho L1 biometric device as L0](https://discuss.ai.google.dev/t/gemini-vision-falsely-identifying-morpho-l1-biometric-device-as-l0/179029)
+
 ## 2026-08-19 14:37 UTC
 - 💬 **[Google Dev Forum]** [videoMetadata` clipping on YouTube URLs no longer clips **audio** (frames still clipped) — ~20× token inflation on long videos](https://discuss.ai.google.dev/t/videometadata-clipping-on-youtube-urls-no-longer-clips-audio-frames-still-clipped-20x-token-inflation-on-long-videos/178970)
 
