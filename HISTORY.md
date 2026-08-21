@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-21 13:50 UTC
+- 💬 **[Google Dev Forum]** [gemini-3.1-flash-tts-preview generates near-silent audio despite finish_reason=STOP](https://discuss.ai.google.dev/t/gemini-3-1-flash-tts-preview-generates-near-silent-audio-despite-finish-reason-stop/179259)
+
 ## 2026-08-20 04:08 UTC
 - 💬 **[Google Dev Forum]** [​Gemini Vision falsely identifying Morpho L1 biometric device as L0](https://discuss.ai.google.dev/t/gemini-vision-falsely-identifying-morpho-l1-biometric-device-as-l0/179029)
 
