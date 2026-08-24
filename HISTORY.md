@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-24 05:18 UTC
+- 💬 **[Google Dev Forum]** [403 PERMISSION_DENIED "Your project has been denied access" on two projects, no notification](https://discuss.ai.google.dev/t/403-permission-denied-your-project-has-been-denied-access-on-two-projects-no-notification/179518)
+
 ## 2026-08-21 13:50 UTC
 - 💬 **[Google Dev Forum]** [gemini-3.1-flash-tts-preview generates near-silent audio despite finish_reason=STOP](https://discuss.ai.google.dev/t/gemini-3-1-flash-tts-preview-generates-near-silent-audio-despite-finish-reason-stop/179259)
 
