@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-25 11:55 UTC
+- 💬 **[Google Dev Forum]** [Paid Tier 1: gemini-3.7-flash failing across Standard, Flex, Batch & Background — Priority downgraded to Standard](https://discuss.ai.google.dev/t/paid-tier-1-gemini-3-7-flash-failing-across-standard-flex-batch-background-priority-downgraded-to-standard/179694)
+
 ## 2026-08-24 05:18 UTC
 - 💬 **[Google Dev Forum]** [403 PERMISSION_DENIED "Your project has been denied access" on two projects, no notification](https://discuss.ai.google.dev/t/403-permission-denied-your-project-has-been-denied-access-on-two-projects-no-notification/179518)
 
