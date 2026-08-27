@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-08-27 11:02 UTC
+- 💬 **[Google Dev Forum]** [Persistent 503 on gemini-3.7-flash with Priority tier (Tier 2 paid) — 0% success over multiple retries](https://discuss.ai.google.dev/t/persistent-503-on-gemini-3-7-flash-with-priority-tier-tier-2-paid-0-success-over-multiple-retries/179804)
+
 ## 2026-08-25 11:55 UTC
 - 💬 **[Google Dev Forum]** [Paid Tier 1: gemini-3.7-flash failing across Standard, Flex, Batch & Background — Priority downgraded to Standard](https://discuss.ai.google.dev/t/paid-tier-1-gemini-3-7-flash-failing-across-standard-flex-batch-background-priority-downgraded-to-standard/179694)
 
