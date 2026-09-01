@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-09-01 17:23 UTC
+- 💬 **[Google Dev Forum]** [Gemini-embedding-001 returns 429 despite AI Studio showing 76 / 20K RPM](https://discuss.ai.google.dev/t/gemini-embedding-001-returns-429-despite-ai-studio-showing-76-20k-rpm/180436)
+- 💬 **[Google Dev Forum]** [Gemini API embedding rejected by an aiplatform.googleapis.com quota - Tier 3 project at 5% of its limit](https://discuss.ai.google.dev/t/gemini-api-embedding-rejected-by-an-aiplatform-googleapis-com-quota-tier-3-project-at-5-of-its-limit/180424)
+
 ## 2026-08-27 11:02 UTC
 - 💬 **[Google Dev Forum]** [Persistent 503 on gemini-3.7-flash with Priority tier (Tier 2 paid) — 0% success over multiple retries](https://discuss.ai.google.dev/t/persistent-503-on-gemini-3-7-flash-with-priority-tier-tier-2-paid-0-success-over-multiple-retries/179804)
 
