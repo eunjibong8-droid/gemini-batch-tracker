@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-02 10:58 UTC
+- 🐙 **[GitHub (googleapis/js-genai)]** [gemini-2.0-flash-001 and gemini-2.0-flash responses are cut off with sendMessageStream method](https://github.com/googleapis/js-genai/issues/793)
+
 ## 2026-09-01 17:23 UTC
 - 💬 **[Google Dev Forum]** [Gemini-embedding-001 returns 429 despite AI Studio showing 76 / 20K RPM](https://discuss.ai.google.dev/t/gemini-embedding-001-returns-429-despite-ai-studio-showing-76-20k-rpm/180436)
 - 💬 **[Google Dev Forum]** [Gemini API embedding rejected by an aiplatform.googleapis.com quota - Tier 3 project at 5% of its limit](https://discuss.ai.google.dev/t/gemini-api-embedding-rejected-by-an-aiplatform-googleapis-com-quota-tier-3-project-at-5-of-its-limit/180424)
