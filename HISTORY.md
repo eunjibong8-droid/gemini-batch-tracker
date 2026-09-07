@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-07 03:53 UTC
+- 💬 **[Google Dev Forum]** [Credit transaction shows -¥492 but cost report shows only ¥296.47 for the same period](https://discuss.ai.google.dev/t/credit-transaction-shows-492-but-cost-report-shows-only-296-47-for-the-same-period/181141)
+
 ## 2026-09-02 10:58 UTC
 - 🐙 **[GitHub (googleapis/js-genai)]** [gemini-2.0-flash-001 and gemini-2.0-flash responses are cut off with sendMessageStream method](https://github.com/googleapis/js-genai/issues/793)
 
