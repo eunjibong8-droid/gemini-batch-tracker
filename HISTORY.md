@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-08 10:57 UTC
+- 💬 **[Google Dev Forum]** [Lifecycle / Retirement Date for Gemini 3 Flash Preview on Vertex AI](https://discuss.ai.google.dev/t/lifecycle-retirement-date-for-gemini-3-flash-preview-on-vertex-ai/181900)
+
 ## 2026-09-08 05:44 UTC
 - 💬 **[Google Dev Forum]** [Gemini 3.8 Flash Agentic Video: HTTP 200 then api_error after 23 processing calls](https://discuss.ai.google.dev/t/gemini-3-8-flash-agentic-video-http-200-then-api-error-after-23-processing-calls/181801)
 
