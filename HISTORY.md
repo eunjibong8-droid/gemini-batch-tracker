@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-08 05:44 UTC
+- 💬 **[Google Dev Forum]** [Gemini 3.8 Flash Agentic Video: HTTP 200 then api_error after 23 processing calls](https://discuss.ai.google.dev/t/gemini-3-8-flash-agentic-video-http-200-then-api-error-after-23-processing-calls/181801)
+
 ## 2026-09-07 03:53 UTC
 - 💬 **[Google Dev Forum]** [Credit transaction shows -¥492 but cost report shows only ¥296.47 for the same period](https://discuss.ai.google.dev/t/credit-transaction-shows-492-but-cost-report-shows-only-296-47-for-the-same-period/181141)
 
