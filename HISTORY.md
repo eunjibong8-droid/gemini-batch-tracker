@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-09 13:50 UTC
+- 💬 **[Google Dev Forum]** [Gemini TTS (gemini-3.1-flash-tts) in production: voice consistency across runs, long-input cutoffs, accent drift, emotional range --> guidance & roadmap?](https://discuss.ai.google.dev/t/gemini-tts-gemini-3-1-flash-tts-in-production-voice-consistency-across-runs-long-input-cutoffs-accent-drift-emotional-range-guidance-roadmap/182191)
+
 ## 2026-09-08 10:57 UTC
 - 💬 **[Google Dev Forum]** [Lifecycle / Retirement Date for Gemini 3 Flash Preview on Vertex AI](https://discuss.ai.google.dev/t/lifecycle-retirement-date-for-gemini-3-flash-preview-on-vertex-ai/181900)
 
