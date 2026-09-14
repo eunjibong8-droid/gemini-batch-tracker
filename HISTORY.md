@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-14 22:39 UTC
+- 💬 **[Google Dev Forum]** [Register Files and 20GB Limit](https://discuss.ai.google.dev/t/register-files-and-20gb-limit/182934)
+
 ## 2026-09-09 13:50 UTC
 - 💬 **[Google Dev Forum]** [Gemini TTS (gemini-3.1-flash-tts) in production: voice consistency across runs, long-input cutoffs, accent drift, emotional range --> guidance & roadmap?](https://discuss.ai.google.dev/t/gemini-tts-gemini-3-1-flash-tts-in-production-voice-consistency-across-runs-long-input-cutoffs-accent-drift-emotional-range-guidance-roadmap/182191)
 
