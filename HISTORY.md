@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-15 12:33 UTC
+- 💬 **[Google Dev Forum]** [Gemini 3.1 Pro Batch jobs stuck with zero requests processed across two Tier 2 projects](https://discuss.ai.google.dev/t/gemini-3-1-pro-batch-jobs-stuck-with-zero-requests-processed-across-two-tier-2-projects/183077)
+
 ## 2026-09-15 06:32 UTC
 - 💬 **[Google Dev Forum]** [Batch API: every gemini-2.5-flash request fails with code 5 "Requested entity was not found"](https://discuss.ai.google.dev/t/batch-api-every-gemini-2-5-flash-request-fails-with-code-5-requested-entity-was-not-found/182956)
 
