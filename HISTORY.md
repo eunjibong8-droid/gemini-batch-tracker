@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-15 17:34 UTC
+- 💬 **[Google Dev Forum]** [Batch API: code 7 "The caller does not have permission" on File API fileUri (works synchronously)](https://discuss.ai.google.dev/t/batch-api-code-7-the-caller-does-not-have-permission-on-file-api-fileuri-works-synchronously/183104)
+
 ## 2026-09-15 12:33 UTC
 - 💬 **[Google Dev Forum]** [Gemini 3.1 Pro Batch jobs stuck with zero requests processed across two Tier 2 projects](https://discuss.ai.google.dev/t/gemini-3-1-pro-batch-jobs-stuck-with-zero-requests-processed-across-two-tier-2-projects/183077)
 
