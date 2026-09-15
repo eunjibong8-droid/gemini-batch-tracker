@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-15 06:32 UTC
+- 💬 **[Google Dev Forum]** [Batch API: every gemini-2.5-flash request fails with code 5 "Requested entity was not found"](https://discuss.ai.google.dev/t/batch-api-every-gemini-2-5-flash-request-fails-with-code-5-requested-entity-was-not-found/182956)
+
 ## 2026-09-14 22:39 UTC
 - 💬 **[Google Dev Forum]** [Register Files and 20GB Limit](https://discuss.ai.google.dev/t/register-files-and-20gb-limit/182934)
 
