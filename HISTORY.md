@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-16 09:26 UTC
+- 💬 **[Google Dev Forum]** [Batch API stuck in RUNNING for 24+ hours - then "Internal error encountered"](https://discuss.ai.google.dev/t/batch-api-stuck-in-running-for-24-hours-then-internal-error-encountered/183232)
+
 ## 2026-09-15 17:34 UTC
 - 💬 **[Google Dev Forum]** [Batch API: code 7 "The caller does not have permission" on File API fileUri (works synchronously)](https://discuss.ai.google.dev/t/batch-api-code-7-the-caller-does-not-have-permission-on-file-api-fileuri-works-synchronously/183104)
 
