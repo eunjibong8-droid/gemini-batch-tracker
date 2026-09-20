@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-20 21:27 UTC
+- 💬 **[Google Dev Forum]** [Vertex AI 3.1 flash image global batch api not working](https://discuss.ai.google.dev/t/vertex-ai-3-1-flash-image-global-batch-api-not-working/183868)
+
 ## 2026-09-18 18:12 UTC
 - 💬 **[Google Dev Forum]** [Presenting false stories for the mis coding, creating fantastic false stories on the events that were not activate](https://discuss.ai.google.dev/t/presenting-false-stories-for-the-mis-coding-creating-fantastic-false-stories-on-the-events-that-were-not-activate/183632)
 
