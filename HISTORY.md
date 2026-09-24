@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-24 23:19 UTC
+- 💬 **[Google Dev Forum]** [Incorrect PROHIBITED_CONTENT classification](https://discuss.ai.google.dev/t/incorrect-prohibited-content-classification/184750)
+
 ## 2026-09-24 05:57 UTC
 - 💬 **[Google Dev Forum]** [Gemini 3.1 Flash Live returns 1011 "Resource has been exhausted" while Rate Limit shows RPM, TPM, and RPD well under the cap](https://discuss.ai.google.dev/t/gemini-3-1-flash-live-returns-1011-resource-has-been-exhausted-while-rate-limit-shows-rpm-tpm-and-rpd-well-under-the-cap/184631)
 
