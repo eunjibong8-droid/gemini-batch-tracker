@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-24 05:57 UTC
+- 💬 **[Google Dev Forum]** [Gemini 3.1 Flash Live returns 1011 "Resource has been exhausted" while Rate Limit shows RPM, TPM, and RPD well under the cap](https://discuss.ai.google.dev/t/gemini-3-1-flash-live-returns-1011-resource-has-been-exhausted-while-rate-limit-shows-rpm-tpm-and-rpd-well-under-the-cap/184631)
+
 ## 2026-09-20 21:27 UTC
 - 💬 **[Google Dev Forum]** [Vertex AI 3.1 flash image global batch api not working](https://discuss.ai.google.dev/t/vertex-ai-3-1-flash-image-global-batch-api-not-working/183868)
 
