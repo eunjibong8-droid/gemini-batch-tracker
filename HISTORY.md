@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-26 00:03 UTC
+- 💬 **[Google Dev Forum]** [Allowlist request: gemini-3.1-flash-image on Vertex AI](https://discuss.ai.google.dev/t/allowlist-request-gemini-3-1-flash-image-on-vertex-ai/184978)
+
 ## 2026-09-24 23:19 UTC
 - 💬 **[Google Dev Forum]** [Incorrect PROHIBITED_CONTENT classification](https://discuss.ai.google.dev/t/incorrect-prohibited-content-classification/184750)
 
