@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-28 01:06 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [Broken links in quickstarts and examples after notebook renames and folder cleanup](https://github.com/google-gemini/cookbook/issues/1394)
+
 ## 2026-09-26 00:03 UTC
 - 💬 **[Google Dev Forum]** [Allowlist request: gemini-3.1-flash-image on Vertex AI](https://discuss.ai.google.dev/t/allowlist-request-gemini-3-1-flash-image-on-vertex-ai/184978)
 
