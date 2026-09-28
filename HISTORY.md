@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-28 15:48 UTC
+- 💬 **[Google Dev Forum]** [Project Benchmark Request: 2M Context Gemini API for Agentic Financial Modeling](https://discuss.ai.google.dev/t/project-benchmark-request-2m-context-gemini-api-for-agentic-financial-modeling/185820)
+
 ## 2026-09-28 01:06 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [Broken links in quickstarts and examples after notebook renames and folder cleanup](https://github.com/google-gemini/cookbook/issues/1394)
 
