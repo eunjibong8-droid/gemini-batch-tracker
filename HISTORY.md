@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-29 15:00 UTC
+- 💬 **[Google Dev Forum]** [Continuously experiencing 429 and 503 errors in Gemini Models](https://discuss.ai.google.dev/t/continuously-experiencing-429-and-503-errors-in-gemini-models/185959)
+
 ## 2026-09-28 15:48 UTC
 - 💬 **[Google Dev Forum]** [Project Benchmark Request: 2M Context Gemini API for Agentic Financial Modeling](https://discuss.ai.google.dev/t/project-benchmark-request-2m-context-gemini-api-for-agentic-financial-modeling/185820)
 
