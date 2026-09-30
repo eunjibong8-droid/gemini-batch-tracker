@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-09-30 16:56 UTC
+- 💬 **[Google Dev Forum]** [Batch Calls return a Status but no indiction of progress](https://discuss.ai.google.dev/t/batch-calls-return-a-status-but-no-indiction-of-progress/186151)
+
 ## 2026-09-29 15:00 UTC
 - 💬 **[Google Dev Forum]** [Continuously experiencing 429 and 503 errors in Gemini Models](https://discuss.ai.google.dev/t/continuously-experiencing-429-and-503-errors-in-gemini-models/185959)
 
