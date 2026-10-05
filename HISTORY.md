@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-05 23:06 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** [Batch API with gemini-3-flash-preview stays PENDING indefinitely for audio input despite audio being listed in batch pricing](https://github.com/google-gemini/cookbook/issues/1235)
+
 ## 2026-10-05 07:33 UTC
 - 💬 **[Google Dev Forum]** [Age Requirements clause: offline (developer-side) generation of static audio/images for a children's app](https://discuss.ai.google.dev/t/age-requirements-clause-offline-developer-side-generation-of-static-audio-images-for-a-childrens-app/186872)
 
