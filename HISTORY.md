@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-05 07:33 UTC
+- 💬 **[Google Dev Forum]** [Age Requirements clause: offline (developer-side) generation of static audio/images for a children's app](https://discuss.ai.google.dev/t/age-requirements-clause-offline-developer-side-generation-of-static-audio-images-for-a-childrens-app/186872)
+
 ## 2026-09-30 16:56 UTC
 - 💬 **[Google Dev Forum]** [Batch Calls return a Status but no indiction of progress](https://discuss.ai.google.dev/t/batch-calls-return-a-status-but-no-indiction-of-progress/186151)
 
