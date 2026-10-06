@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-06 03:15 UTC
+- 💬 **[Google Dev Forum]** [Gemini API latency has recently increased significantly, especially with store=true](https://discuss.ai.google.dev/t/gemini-api-latency-has-recently-increased-significantly-especially-with-store-true/187106)
+
 ## 2026-10-05 23:06 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** [Batch API with gemini-3-flash-preview stays PENDING indefinitely for audio input despite audio being listed in batch pricing](https://github.com/google-gemini/cookbook/issues/1235)
 
