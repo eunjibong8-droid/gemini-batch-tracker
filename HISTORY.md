@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-07 15:22 UTC
+- 💬 **[Google Dev Forum]** [Gemini-3.8-live: prebuilt voice Kore intermittently switches to a different, male-sounding speaker for a whole reply](https://discuss.ai.google.dev/t/gemini-3-8-live-prebuilt-voice-kore-intermittently-switches-to-a-different-male-sounding-speaker-for-a-whole-reply/187351)
+
 ## 2026-10-06 03:15 UTC
 - 💬 **[Google Dev Forum]** [Gemini API latency has recently increased significantly, especially with store=true](https://discuss.ai.google.dev/t/gemini-api-latency-has-recently-increased-significantly-especially-with-store-true/187106)
 
