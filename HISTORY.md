@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-12 18:48 UTC
+- 💬 **[Google Dev Forum]** [Google AI Ultra (20x) account locked out with “Come back tomorrow” error in Google Flow](https://discuss.ai.google.dev/t/google-ai-ultra-20x-account-locked-out-with-come-back-tomorrow-error-in-google-flow/188507)
+
 ## 2026-10-12 08:53 UTC
 - 💬 **[Google Dev Forum]** [Suspected copyright-filter false positive blocks verbatim Slovak legislative TTS (gemini-3.8-flash-tts, Batch API)](https://discuss.ai.google.dev/t/suspected-copyright-filter-false-positive-blocks-verbatim-slovak-legislative-tts-gemini-3-8-flash-tts-batch-api/188425)
 - 💬 **[Google Dev Forum]** [Google AI Ultra (20x) account locked out with "Come back tomorrow" error in Google Flow](https://discuss.ai.google.dev/t/google-ai-ultra-20x-account-locked-out-with-come-back-tomorrow-error-in-google-flow/188404)
