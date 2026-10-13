@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-13 16:18 UTC
+- 🐙 **[GitHub (google-gemini/cookbook)]** `closed` [Batch mode support for Gemini TTS API](https://github.com/google-gemini/cookbook/issues/926)
+
 ## 2026-10-13 08:16 UTC
 - 💬 **[Google Dev Forum]** [Gemini Batch quota shows 1 active batch, but no active jobs appear in the API list](https://discuss.ai.google.dev/t/gemini-batch-quota-shows-1-active-batch-but-no-active-jobs-appear-in-the-api-list/188666)
 
