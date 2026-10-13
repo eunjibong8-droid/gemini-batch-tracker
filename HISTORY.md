@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-13 08:16 UTC
+- 💬 **[Google Dev Forum]** [Gemini Batch quota shows 1 active batch, but no active jobs appear in the API list](https://discuss.ai.google.dev/t/gemini-batch-quota-shows-1-active-batch-but-no-active-jobs-appear-in-the-api-list/188666)
+
 ## 2026-10-12 18:48 UTC
 - 💬 **[Google Dev Forum]** [Google AI Ultra (20x) account locked out with “Come back tomorrow” error in Google Flow](https://discuss.ai.google.dev/t/google-ai-ultra-20x-account-locked-out-with-come-back-tomorrow-error-in-google-flow/188507)
 
