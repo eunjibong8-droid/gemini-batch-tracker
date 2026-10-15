@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-10-15 18:31 UTC
+- 🐙 **[GitHub (google/generative-ai-python)]** `closed` [internal endpoint jsonPayload.endpoint points to projects/3972195257/ instead of my project](https://github.com/google-gemini/deprecated-generative-ai-python/issues/735)
+- 🐙 **[GitHub (google/generative-ai-python)]** [ GoogleGenerativeAIError: Error embedding content: 'utf-8' codec can't encode character '\ud835' in position 897: surrogates not allowed](https://github.com/google-gemini/deprecated-generative-ai-python/issues/212)
+
 ## 2026-10-15 14:19 UTC
 - 💬 **[Google Dev Forum]** [Completed Gemini image batch: 334 results inaccessible (503/504 or HTTP 200 with only name and done)](https://discuss.ai.google.dev/t/completed-gemini-image-batch-334-results-inaccessible-503-504-or-http-200-with-only-name-and-done/189658)
 
