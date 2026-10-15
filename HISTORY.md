@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-15 14:19 UTC
+- 💬 **[Google Dev Forum]** [Completed Gemini image batch: 334 results inaccessible (503/504 or HTTP 200 with only name and done)](https://discuss.ai.google.dev/t/completed-gemini-image-batch-334-results-inaccessible-503-504-or-http-200-with-only-name-and-done/189658)
+
 ## 2026-10-13 16:18 UTC
 - 🐙 **[GitHub (google-gemini/cookbook)]** `closed` [Batch mode support for Gemini TTS API](https://github.com/google-gemini/cookbook/issues/926)
 
