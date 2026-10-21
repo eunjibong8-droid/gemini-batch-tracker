@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-21 07:19 UTC
+- 💬 **[Google Dev Forum]** [Gemini-3.8-flash-lite-tts stops early on batched text with <long pause> tags while reporting completed / STOP (truncated audio is still billed)](https://discuss.ai.google.dev/t/gemini-3-8-flash-lite-tts-stops-early-on-batched-text-with-long-pause-tags-while-reporting-completed-stop-truncated-audio-is-still-billed/191142)
+
 ## 2026-10-15 18:31 UTC
 - 🐙 **[GitHub (google/generative-ai-python)]** `closed` [internal endpoint jsonPayload.endpoint points to projects/3972195257/ instead of my project](https://github.com/google-gemini/deprecated-generative-ai-python/issues/735)
 - 🐙 **[GitHub (google/generative-ai-python)]** [ GoogleGenerativeAIError: Error embedding content: 'utf-8' codec can't encode character '\ud835' in position 897: surrogates not allowed](https://github.com/google-gemini/deprecated-generative-ai-python/issues/212)
