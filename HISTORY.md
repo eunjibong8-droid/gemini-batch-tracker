@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-26 07:36 UTC
+- 💬 **[Google Dev Forum]** [Gemini API: Metadata 200 but generateContent returns 404/503 across multiple models](https://discuss.ai.google.dev/t/gemini-api-metadata-200-but-generatecontent-returns-404-503-across-multiple-models/195173)
+
 ## 2026-10-21 07:19 UTC
 - 💬 **[Google Dev Forum]** [Gemini-3.8-flash-lite-tts stops early on batched text with <long pause> tags while reporting completed / STOP (truncated audio is still billed)](https://discuss.ai.google.dev/t/gemini-3-8-flash-lite-tts-stops-early-on-batched-text-with-long-pause-tags-while-reporting-completed-stop-truncated-audio-is-still-billed/191142)
 
