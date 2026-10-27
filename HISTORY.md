@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-27 10:49 UTC
+- 💬 **[Google Dev Forum]** [Gemini-3.1-flash-lite on Vertex AI: random 400 INVALID_ARGUMENT with no details for prompts over ~129k tokens when the prompt isn't cached](https://discuss.ai.google.dev/t/gemini-3-1-flash-lite-on-vertex-ai-random-400-invalid-argument-with-no-details-for-prompts-over-129k-tokens-when-the-prompt-isnt-cached/196267)
+
 ## 2026-10-26 07:36 UTC
 - 💬 **[Google Dev Forum]** [Gemini API: Metadata 200 but generateContent returns 404/503 across multiple models](https://discuss.ai.google.dev/t/gemini-api-metadata-200-but-generatecontent-returns-404-503-across-multiple-models/195173)
 
