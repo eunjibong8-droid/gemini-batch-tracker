@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-29 16:46 UTC
+- 💬 **[Google Dev Forum]** [[TTS Bug] [Batch API] gemini-3.8-flash-tts is adding "TV static" blast to the end of every audio response [ja-JP]](https://discuss.ai.google.dev/t/tts-bug-batch-api-gemini-3-8-flash-tts-is-adding-tv-static-blast-to-the-end-of-every-audio-response-ja-jp/196786)
+
 ## 2026-10-27 10:49 UTC
 - 💬 **[Google Dev Forum]** [Gemini-3.1-flash-lite on Vertex AI: random 400 INVALID_ARGUMENT with no details for prompts over ~129k tokens when the prompt isn't cached](https://discuss.ai.google.dev/t/gemini-3-1-flash-lite-on-vertex-ai-random-400-invalid-argument-with-no-details-for-prompts-over-129k-tokens-when-the-prompt-isnt-cached/196267)
 
