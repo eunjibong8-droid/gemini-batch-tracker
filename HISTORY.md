@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-30 23:58 UTC
+- 💬 **[Google Dev Forum]** [Gemini 3.8 Flash TTS with a replicated voice sometimes speaks German words in Spanish and Russian text](https://discuss.ai.google.dev/t/gemini-3-8-flash-tts-with-a-replicated-voice-sometimes-speaks-german-words-in-spanish-and-russian-text/197033)
+
 ## 2026-10-30 15:12 UTC
 - 💬 **[Google Dev Forum]** [gemini-3-pro-image (Batch API) returns up to 35 billed images for single-image requests since 8 Oct 2026](https://discuss.ai.google.dev/t/gemini-3-pro-image-batch-api-returns-up-to-35-billed-images-for-single-image-requests-since-8-oct-2026/196940)
 
