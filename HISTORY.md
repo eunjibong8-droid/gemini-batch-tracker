@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-10-30 15:12 UTC
+- 💬 **[Google Dev Forum]** [gemini-3-pro-image (Batch API) returns up to 35 billed images for single-image requests since 8 Oct 2026](https://discuss.ai.google.dev/t/gemini-3-pro-image-batch-api-returns-up-to-35-billed-images-for-single-image-requests-since-8-oct-2026/196940)
+
 ## 2026-10-29 16:46 UTC
 - 💬 **[Google Dev Forum]** [[TTS Bug] [Batch API] gemini-3.8-flash-tts is adding "TV static" blast to the end of every audio response [ja-JP]](https://discuss.ai.google.dev/t/tts-bug-batch-api-gemini-3-8-flash-tts-is-adding-tv-static-blast-to-the-end-of-every-audio-response-ja-jp/196786)
 
