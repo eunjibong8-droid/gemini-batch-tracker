@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-03 08:30 UTC
+- 💬 **[Google Dev Forum]** [Jules Pro3.1 publish QuantumTPu.zip to app/***,where? Argon create miracle in 1 promot](https://discuss.ai.google.dev/t/jules-pro3-1-publish-quantumtpu-zip-to-app-where-argon-create-miracle-in-1-promot/197743)
+
 ## 2026-10-30 23:58 UTC
 - 💬 **[Google Dev Forum]** [Gemini 3.8 Flash TTS with a replicated voice sometimes speaks German words in Spanish and Russian text](https://discuss.ai.google.dev/t/gemini-3-8-flash-tts-with-a-replicated-voice-sometimes-speaks-german-words-in-spanish-and-russian-text/197033)
 
