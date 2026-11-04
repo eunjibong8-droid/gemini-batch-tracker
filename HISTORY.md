@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-04 17:52 UTC
+- 💬 **[Google Dev Forum]** [Paid Account Access Denied (403): Request to restore gen-lang-client](https://discuss.ai.google.dev/t/paid-account-access-denied-403-request-to-restore-gen-lang-client/198145)
+
 ## 2026-11-03 08:30 UTC
 - 💬 **[Google Dev Forum]** [Jules Pro3.1 publish QuantumTPu.zip to app/***,where? Argon create miracle in 1 promot](https://discuss.ai.google.dev/t/jules-pro3-1-publish-quantumtpu-zip-to-app-where-argon-create-miracle-in-1-promot/197743)
 
