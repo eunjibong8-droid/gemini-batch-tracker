@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-06 08:22 UTC
+- 💬 **[Google Dev Forum]** [Antigravity 403 (Google AI Pro Subscriber)](https://discuss.ai.google.dev/t/antigravity-403-google-ai-pro-subscriber/198640)
+
 ## 2026-11-04 17:52 UTC
 - 💬 **[Google Dev Forum]** [Paid Account Access Denied (403): Request to restore gen-lang-client](https://discuss.ai.google.dev/t/paid-account-access-denied-403-request-to-restore-gen-lang-client/198145)
 
