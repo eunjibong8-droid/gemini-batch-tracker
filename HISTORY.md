@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-11-11 13:52 UTC
+- 💬 **[Google Dev Forum]** [Gemini 2.5 Flash Batch API: grounding billed as paid while under 1,500 RPD free limit — how are grounded prompts counted?](https://discuss.ai.google.dev/t/gemini-2-5-flash-batch-api-grounding-billed-as-paid-while-under-1-500-rpd-free-limit-how-are-grounded-prompts-counted/199583)
+- 💬 **[Google Dev Forum]** [Ctx := context.Background() client, err := genai.NewClient(ctx, &genai.ClientConfig{ APIKey: os.Getenv("GEMINI_API_KEY"), Backend: genai.BackendGeminiAPI, }) if err != nil { log.Fatal(err) } contents := []*genai.Content{ genai.NewContent](https://discuss.ai.google.dev/t/ctx-context-background-client-err-genai-newclient-ctx-genai-clientconfig-apikey-os-getenv-gemini-api-key-backend-genai-backendgeminiapi-if-err-nil-log-fatal-err-contents-genai-content-genai-newcontent/199581)
+
 ## 2026-11-07 20:01 UTC
 - 💬 **[Google Dev Forum]** [Locall llm tests request from community](https://discuss.ai.google.dev/t/locall-llm-tests-request-from-community/198891)
 
