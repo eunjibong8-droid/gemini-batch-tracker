@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-15 15:29 UTC
+- 💬 **[Google Dev Forum]** [Title: Gemini 4 removes explicit context caching: my per-call cost goes up 4× with no way to control it](https://discuss.ai.google.dev/t/title-gemini-4-removes-explicit-context-caching-my-per-call-cost-goes-up-4x-with-no-way-to-control-it/200723)
+
 ## 2026-11-15 07:40 UTC
 - 💬 **[Google Dev Forum]** [Gemini image API: independent text/thinking cap, reference-input limits and failed-request billing](https://discuss.ai.google.dev/t/gemini-image-api-independent-text-thinking-cap-reference-input-limits-and-failed-request-billing/200665)
 
