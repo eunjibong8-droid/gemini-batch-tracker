@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-17 01:58 UTC
+- 🐙 **[GitHub (googleapis/js-genai)]** `closed` [Batch responses don’t populate response.text; need to read candidates[0].content.parts](https://github.com/googleapis/js-genai/issues/1433)
+
 ## 2026-11-15 15:29 UTC
 - 💬 **[Google Dev Forum]** [Title: Gemini 4 removes explicit context caching: my per-call cost goes up 4× with no way to control it](https://discuss.ai.google.dev/t/title-gemini-4-removes-explicit-context-caching-my-per-call-cost-goes-up-4x-with-no-way-to-control-it/200723)
 
