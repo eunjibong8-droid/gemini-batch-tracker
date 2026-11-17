@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-17 10:31 UTC
+- 💬 **[Google Dev Forum]** [Gemini-3.8-flash ignores responseJsonSchema in Batch API (inline requests); same request is schema-valid synchronously](https://discuss.ai.google.dev/t/gemini-3-8-flash-ignores-responsejsonschema-in-batch-api-inline-requests-same-request-is-schema-valid-synchronously/201536)
+
 ## 2026-11-17 01:58 UTC
 - 🐙 **[GitHub (googleapis/js-genai)]** `closed` [Batch responses don’t populate response.text; need to read candidates[0].content.parts](https://github.com/googleapis/js-genai/issues/1433)
 
