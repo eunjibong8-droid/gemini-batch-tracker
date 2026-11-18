@@ -1,5 +1,10 @@
 # 발견 이력
 
+## 2026-11-18 10:32 UTC
+- 💬 **[Google Dev Forum]** [Files list is empty, but FileStorageBytesPerProject remains at 29.28 GiB](https://discuss.ai.google.dev/t/files-list-is-empty-but-filestoragebytesperproject-remains-at-29-28-gib/202047)
+- 💬 **[Google Dev Forum]** [Gemini 4 Hydrogen: Thought-Channel Leakage, Dropped Stop Boundaries, and Turn Impersonation at 200k+ Tokens (Clean on 3.8 Flash)](https://discuss.ai.google.dev/t/gemini-4-hydrogen-thought-channel-leakage-dropped-stop-boundaries-and-turn-impersonation-at-200k-tokens-clean-on-3-8-flash/202021)
+- 💬 **[Google Dev Forum]** [[Urgent Security & Abuse Report] Mass Exploitation of "$0 Gemini Ultra" Billing Bug Combined with Open-Source API Proxy Redistribution](https://discuss.ai.google.dev/t/urgent-security-abuse-report-mass-exploitation-of-0-gemini-ultra-billing-bug-combined-with-open-source-api-proxy-redistribution/201997)
+
 ## 2026-11-17 10:31 UTC
 - 💬 **[Google Dev Forum]** [Gemini-3.8-flash ignores responseJsonSchema in Batch API (inline requests); same request is schema-valid synchronously](https://discuss.ai.google.dev/t/gemini-3-8-flash-ignores-responsejsonschema-in-batch-api-inline-requests-same-request-is-schema-valid-synchronously/201536)
 
