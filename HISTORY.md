@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-25 04:00 UTC
+- 💬 **[Google Dev Forum]** [Gemini Live (Vertex, BidiGenerateContent): short "Hello." recognized with manual activity but not automatic activity detection - how to trace?](https://discuss.ai.google.dev/t/gemini-live-vertex-bidigeneratecontent-short-hello-recognized-with-manual-activity-but-not-automatic-activity-detection-how-to-trace/204998)
+
 ## 2026-11-18 10:32 UTC
 - 💬 **[Google Dev Forum]** [Files list is empty, but FileStorageBytesPerProject remains at 29.28 GiB](https://discuss.ai.google.dev/t/files-list-is-empty-but-filestoragebytesperproject-remains-at-29-28-gib/202047)
 - 💬 **[Google Dev Forum]** [Gemini 4 Hydrogen: Thought-Channel Leakage, Dropped Stop Boundaries, and Turn Impersonation at 200k+ Tokens (Clean on 3.8 Flash)](https://discuss.ai.google.dev/t/gemini-4-hydrogen-thought-channel-leakage-dropped-stop-boundaries-and-turn-impersonation-at-200k-tokens-clean-on-3-8-flash/202021)
