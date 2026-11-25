@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-25 23:30 UTC
+- 💬 **[Google Dev Forum]** [Batches.cancel on an already-SUCCEEDED batch overwrites it as CANCELLED and its results are lost](https://discuss.ai.google.dev/t/batches-cancel-on-an-already-succeeded-batch-overwrites-it-as-cancelled-and-its-results-are-lost/205436)
+
 ## 2026-11-25 14:49 UTC
 - 💬 **[Google Dev Forum]** [Gemini batch API - thinking does not work](https://discuss.ai.google.dev/t/gemini-batch-api-thinking-does-not-work/205249)
 - 💬 **[Google Dev Forum]** [Gemini-3-flash-preview cost](https://discuss.ai.google.dev/t/gemini-3-flash-preview-cost/205204)
