@@ -1,5 +1,9 @@
 # 발견 이력
 
+## 2026-11-25 14:49 UTC
+- 💬 **[Google Dev Forum]** [Gemini batch API - thinking does not work](https://discuss.ai.google.dev/t/gemini-batch-api-thinking-does-not-work/205249)
+- 💬 **[Google Dev Forum]** [Gemini-3-flash-preview cost](https://discuss.ai.google.dev/t/gemini-3-flash-preview-cost/205204)
+
 ## 2026-11-25 04:00 UTC
 - 💬 **[Google Dev Forum]** [Gemini Live (Vertex, BidiGenerateContent): short "Hello." recognized with manual activity but not automatic activity detection - how to trace?](https://discuss.ai.google.dev/t/gemini-live-vertex-bidigeneratecontent-short-hello-recognized-with-manual-activity-but-not-automatic-activity-detection-how-to-trace/204998)
 
