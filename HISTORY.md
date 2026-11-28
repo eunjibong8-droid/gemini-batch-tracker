@@ -1,5 +1,8 @@
 # 발견 이력
 
+## 2026-11-28 11:29 UTC
+- 💬 **[Google Dev Forum]** [Best Practices for Using Gemini API With a Shopify Product Catalogue](https://discuss.ai.google.dev/t/best-practices-for-using-gemini-api-with-a-shopify-product-catalogue/206482)
+
 ## 2026-11-25 23:30 UTC
 - 💬 **[Google Dev Forum]** [Batches.cancel on an already-SUCCEEDED batch overwrites it as CANCELLED and its results are lost](https://discuss.ai.google.dev/t/batches-cancel-on-an-already-succeeded-batch-overwrites-it-as-cancelled-and-its-results-are-lost/205436)
 
